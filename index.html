@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+
+    </style>
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" class="navbar bg-dark border-bottom border-body"
+        data-bs-theme="dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="im/wcl-logo-removebg-preview.png" alt="Bootstrap" width="70" height="64">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    <a class="nav-link" href="#">Matches</a>
+                    <a class="nav-link" href="#">Standings</a>
+                    <a class="nav-link" href="#">Venues</a>
+                    <a class="nav-link" href="#">Stats</a>
+                    <a class="nav-link" href="news.html">News</a>
+                    <a class="nav-link" href="/index.html#main-4">Contact</a>
+                </div>
+            </div>
+            <img src="sponsors/adidas.png" class="float-end d-none d-lg-block"
+                style="height: 50px; padding-right: 20px;" alt="Right Image">
+            <img src="sponsors/visa.png" class="float-end d-none d-lg-block" style="height: 50px; padding-right: 20px;"
+                alt="Right Image">
+
+        </div>
+    </nav>
+
+    <div class="p-3 mb-2 text-primary-emphasis main-4">
+        
+        <div id="carouselExampleFade" class="carousel slide carousel-fade ">
+            <div class="carousel-inner ">
+                <div class="carousel-item active ">
+                    <img src="carousel/1.jpeg" class="d-block w-100" alt="..." style=" height: 550px;">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h2 style="text-shadow:2px 2px 4px rgba(0, 0, 0, 0.5); color: black; " class="heading container">Remarkable Comback</h2>
+                        <p>Some representative placeholder content for the first slide.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="carousel/3.avif" class="d-block w-100" alt="..." style=" height: 550px;">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h2 style="text-shadow:2px 2px 4px rgba(0, 0, 0, 0.5);" class="heading container">Where is the 2025 final?</h2>
+                        <p>Some representative placeholder content for the first slide.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="carousel/carousel-2.webp" class="d-block w-100" alt="..." style=" height: 550px;">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h2 style="text-shadow:2px 2px 4px rgba(0, 0, 0, 0.5);" class="heading container">WSL Foundation</h2>
+                        <p>Some representative placeholder content for the first slide.</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+        <div class=" mt-4 text-center">
+            <h3 class="container text-center display-7 fw-bold text-uppercase d-flex justify-content-center text-dark p-3 rounded"
+                style="background-color: #d7e7ff; color: #22313f; font-family: 'Bebas Neue', sans-serif;">
+                Fixtures and Results
+            </h3>
+            <div class="scroll-container">
+                <div class="scroll-wrapper">
+
+
+                    <div class="event-card ">
+                        <h5 class="card-title main-1">Match 1</h5>
+                        <div class="d-flex justify-content-center align-items-center main-1">
+                            <img src="teams/fcb.png" class="team-logo me-2" alt="Team 1"
+                                style="height: 60px; width: 60px;">
+                            <span class="score ">2 - 1</span>
+                            <img src="teams/brazil.png" class="team-logo ms-2" alt="Team 2"
+                                style="height: 60px; width: 60px;">
+                        </div>
+                        <p class="mt-2">Date: 10 Mar 2025 | Time: 7:30 PM</p>
+                        <p><strong>Venue:</strong> Wembley Stadium</p>
+                        <button class="btn">View Details</button>
+                    </div>
+
+                    <div class="event-card">
+                        <h5 class="card-title">Match 2</h5>
+                        <div class="d-flex justify-content-center align-items-center">
+                            <img src="teams/bayren.png" class="team-logo me-2" alt="Team 3">
+                            <span class="score">1 - 3</span>
+                            <img src="teams/mnU.png" class="team-logo ms-2" alt="Team 4">
+                        </div>
+                        <p class="mt-2">Date: 12 Mar 2025 | Time: 9:00 PM</p>
+                        <p><strong>Venue:</strong> Camp Nou</p>
+                        <button class="btn ">View Details</button>
+                    </div>
+
+                    <div class="event-card">
+                        <h5 class="card-title">Match 3</h5>
+                        <div class="d-flex justify-content-center align-items-center">
+                            <img src="teams/france_files/france.png" class="team-logo me-2" alt="Team 5"
+                                style="width: 46px; padding-right: 4px;">
+                            <span class="score">0 - 0</span>
+                            <img src="teams/Rmad.png" class="team-logo ms-2" alt="Team 6">
+                        </div>
+                        <p class="mt-2">Date: 15 Mar 2025 | Time: 8:45 PM</p>
+                        <p><strong>Venue:</strong> Allianz Arena</p>
+                        <button class="btn ">View Details</button>
+                    </div>
+
+                    <div class="event-card">
+                        <h5 class="card-title">Match 4</h5>
+                        <div class="d-flex justify-content-center align-items-center">
+                            <img src="teams/acmilan.png" class="team-logo me-2" alt="Team 7">
+                            <span class="score">3 - 2</span>
+                            <img src="teams/spain.png" class="team-logo ms-2" alt="Team 8">
+                        </div>
+                        <p class="mt-2">Date: 17 Mar 2025 | Time: 6:00 PM</p>
+                        <p><strong>Venue:</strong> San Siro</p>
+                        <button class="btn ">View Details</button>
+                    </div>
+
+                    <div class="event-card ">
+                        <h5 class="card-title main-1">Match 5</h5>
+                        <div class="d-flex justify-content-center align-items-center main-1">
+                            <img src="teams/arsenal.png" class="team-logo me-2" alt="Team 1"
+                                style="height: 50px; width: 50px;">
+                            <span class="score ">2 - 1</span>
+                            <img src="teams/ajax.png" class="team-logo ms-2" alt="Team 2"
+                                style="height: 60px; width: 60px;">
+                        </div>
+                        <p class="mt-2">Date: 10 Mar 2025 | Time: 7:30 PM</p>
+                        <p><strong>Venue:</strong> Wembley Stadium</p>
+                        <button class="btn ">View Details</button>
+                    </div>
+
+                    <div class="event-card">
+                        <h5 class="card-title">Match 6</h5>
+                        <div class="d-flex justify-content-center align-items-center">
+                            <img src="teams/brazil.png.png" class="team-logo ms-2" alt="Team 4">
+                            <span class="score">1 - 3</span>
+                            <img src="teams/bayren.png" class="team-logo me-2" alt="Team 3">
+                        </div>
+                        <p class="mt-2">Date: 12 Mar 2025 | Time: 9:00 PM</p>
+                        <p><strong>Venue:</strong> Camp Nou</p>
+                        <button class="btn ">View Details</button>
+                    </div>
+
+                    <div class="event-card">
+                        <h5 class="card-title">Match 7</h5>
+                        <div class="d-flex justify-content-center align-items-center">
+                            <img src="teams/Rmad.png" class="team-logo me-2" alt="Team 5">
+                            <span class="score">0 - 0</span>
+                            <img src="teams/fcb.png" class="team-logo ms-2" alt="Team 6">
+                        </div>
+                        <p class="mt-2">Date: 15 Mar 2025 | Time: 8:45 PM</p>
+                        <p><strong>Venue:</strong> Allianz Arena</p>
+                        <button class="btn ">View Details</button>
+                    </div>
+
+                    <div class="event-card">
+                        <h5 class="card-title">Match 8</h5>
+                        <div class="d-flex justify-content-center align-items-center">
+                            <img src="teams/ajax.png" class="team-logo me-2" alt="Team 7">
+                            <span class="score">3 - 2</span>
+                            <img src="teams/mnU.png" class="team-logo ms-2" alt="Team 8">
+                        </div>
+                        <p class="mt-2">Date: 17 Mar 2025 | Time: 6:00 PM</p>
+                        <p><strong>Venue:</strong> San Siro</p>
+                        <button class="btn ">View Details</button>
+                    </div>
+
+                    <div class="event-card">
+                        <h5 class="card-title">Match 9</h5>
+                        <div class="d-flex justify-content-center align-items-center">
+                            <img src="teams/spain.png" class="team-logo me-2" alt="Team 5">
+                            <span class="score">0 - 0</span>
+                            <img src="teams/arsenal.png" class="team-logo ms-2" alt="Team 6">
+                        </div>
+                        <p class="mt-2">Date: 15 Mar 2025 | Time: 8:45 PM</p>
+                        <p><strong>Venue:</strong> Allianz Arena</p>
+                        <button class="btn ">View Details</button>
+                    </div>
+
+                    <div class="event-card">
+                        <h5 class="card-title">Match 10</h5>
+                        <div class="d-flex justify-content-center align-items-center">
+                            <img src="teams/france_files/france.png" class="team-logo me-2" alt="Team 7"
+                                style="width: 46px; padding-right: 4px;">
+                            <span class="score">3 - 2</span>
+                            <img src="teams/acmilan.png" class="team-logo ms-2" alt="Team 8">
+                        </div>
+                        <p class="mt-2">Date: 17 Mar 2025 | Time: 6:00 PM</p>
+                        <p><strong>Venue:</strong> San Siro</p>
+                        <button class="btn ">View Details</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-4 standings" style="background: url(carousel/);">
+            <h3 class="container text-center display-7 fw-bold text-uppercase   p-3 rounded"
+                style="font-family: 'Bebas Neue', sans-serif; background-color: #d7e7ff;">
+                Standings
+            </h3>
+
+            <div class="row">
+                <!-- First Two List Groups in First Row -->
+                <div class="col-md-6">
+                    <ul class="list-group list-group-flush">
+                        <h4 class="mb-2 ">Group A</h4>
+                        <li class="list-group-item d-flex justify-content-between mb-1 rounded-3 text-dark">
+                            <span>1. &nbsp;&nbsp;&nbsp;&nbsp;<img src="teams/fcb.png" alt="">&nbsp;&nbsp;Barcelona 
+                            </span> <span>&emsp; 10 pts &emsp; +7</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between mb-1 rounded-3 text-dark">
+                            <span>2. &nbsp;&nbsp;&nbsp;&nbsp;<img src="teams/bayren.png" alt="">&nbsp;&nbsp;Bayern
+                                Munich </span> <span>&emsp; 9 pts &emsp; +5</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between mb-1 rounded-3 text-dark">
+                            <span>3. &nbsp;&nbsp;&nbsp;&nbsp;<img src="teams/france_files/france.png"
+                                    alt="">&nbsp;&nbsp;France  </span> <span>&emsp; 7 pts &emsp; +3</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between mb-1 rounded-3 text-dark">
+                            <span>4. &nbsp;&nbsp;&nbsp;&nbsp;<img src="teams/acmilan.png" alt="">&nbsp;&nbsp;AC Milan
+                                 </span> <span>&emsp; 4 pts &emsp; - 2</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between mb-1 rounded-3 text-dark">
+                            <span>5. &nbsp;&nbsp;&nbsp;&nbsp;<img src="teams/arsenal.png" alt="">&nbsp;&nbsp;Arsenal
+                                 </span> <span>&emsp; 1 pt &emsp; - 6</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <ul class="list-group list-group-flush">
+                        <h4 class="mb-2 ">Group B</h4>
+                        <li class="list-group-item d-flex justify-content-between mb-1 rounded-3 text-dark">
+                            <span>1. &nbsp;&nbsp;&nbsp;&nbsp;<img src="teams/brazil.png" alt="">&nbsp;&nbsp;Brazil 
+                            </span> <span>&emsp; 12 pts &emsp; +6</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between mb-1 rounded-3 text-dark">
+                            <span>2. &nbsp;&nbsp;&nbsp;&nbsp;<img src="teams/mnU.png" alt="">&nbsp;&nbsp;Manchester
+                                United </span> <span>&emsp; 9 pts &emsp; +4</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between mb-1 rounded-3 text-dark">
+                            <span>3. &nbsp;&nbsp;&nbsp;&nbsp;<img src="teams/Rmad.png" alt="">&nbsp;&nbsp;Real Madrid
+                                </span> <span>&emsp; 7 pts &emsp; +2</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between mb-1 rounded-3 text-dark">
+                            <span>4. &nbsp;&nbsp;&nbsp;&nbsp;<img src="teams/spain.png" alt="">&nbsp;&nbsp;Spain 
+                                </span> <span>&emsp; 4 pts &emsp; -2</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between mb-1 rounded-3 text-dark">
+                            <span>5. &nbsp;&nbsp;&nbsp;&nbsp;<img src="teams/ajax.png" alt="">&nbsp;&nbsp;Ajax 
+                                </span> <span>&emsp; 0 pts &emsp; -7</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="host-cities " id="main-4">
+            <h2 class="container mb-1 mt-5 text-center heading" >Venue</h2>
+            <div class="Australia">
+                <div class=" mt-4">
+                    <h4 class="mb-2" style="color: #d7e7ff;">Australia</h4>
+                    <div class="row g-3">
+                        <div class="col-md-3">
+                            <div class="venue-card">
+                                <img src="stadium/a1.jpg" alt="Image" style="height: 180px;">
+                                <div class="venue-card-body">
+                                    SYDNEY
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3">
+                            <div class="venue-card">
+                                <img src="stadium/a2.jpg" alt="Image" style="height: 180px;">
+                                <div class="venue-card-body">
+                                    MELBOURNE
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3">
+                            <div class="venue-card">
+                                <img src="stadium/a3.jpeg" alt="Image" style="height: 180px;">
+                                <div class="venue-card-body">
+                                    PERTH
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3">
+                            <div class="venue-card">
+                                <img src="stadium/a4.jpg" alt="Image" style="height: 180px;">
+                                <div class="venue-card-body">
+                                    QUEENSLAND
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <div class="col-md-3">
+                            <div class="venue-card">
+                                <img src="stadium/a5.webp" alt="Image" style="height: 180px;">
+                                <div class="venue-card-body">
+                                    BRISBANE
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3">
+                            <div class="venue-card">
+                                <img src="stadium/a6.webp" alt="Image" style="height: 180px;">
+                                <div class="venue-card-body">
+                                    ADELAIDE
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="New Zealand">
+                    <div class=" mt-4">
+                        <h4 class="mb-2" style="color: #d7e7ff;">New Zealand</h4>
+                        <div class="row g-3">
+                            <div class="col-md-3">
+                                <div class="venue-card">
+                                    <img src="stadium/n1.jpg" alt="Image" style="height: 180px;">
+                                    <div class="venue-card-body">
+                                        WEILLINGTON
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3">
+                                <div class="venue-card">
+                                    <img src="stadium/n2.jpg" alt="Image" style="height: 180px;">
+                                    <div class="venue-card-body">
+                                        AUCKLAND
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3">
+                                <div class="venue-card">
+                                    <img src="stadium/n3.jpg" alt="Image" style="height: 180px;">
+                                    <div class="venue-card-body">
+                                        HAMILTON
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3">
+                                <div class="venue-card">
+                                    <img src="stadium/n4.webp" alt="Image" style="height: 180px;">
+                                    <div class="venue-card-body">
+                                        CHRISTCHURCH
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="stats-container">
+            <h2 class="container text-center mb-4 text-primary fw-bold mt-5 heading"  > Top Player Stats</h2>
+        
+            <div class="table-container">
+                
+                <!-- Top Goal Scorers -->
+                <div class="table-wrapper">
+                    <h4 class="text-center fw-bold football-heading"> Top 10 Goal Scorers</h4>
+                    <table class="table table-striped table-bordered text-center">
+                        <thead>
+                            <tr>
+                                <th>Rank</th>
+                                <th>Player</th>
+                                <th>Team</th>
+                                <th>Goals</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="first-row">
+                                <td>1</td>
+                                <td><img src="player/messi.png" class="player-img"> Messi</td>
+                                <td class="first">Barcelona</td>
+                                <td class="first">7</td>
+                            </tr>
+                            <tr><td>2</td><td>Cristiano Ronaldo</td><td>Real Madrid</td><td>6</td></tr>
+                            <tr><td>3</td><td>Neymar</td><td>PSG</td><td>6</td></tr>
+                            <tr><td>4</td><td>Lewandowski</td><td>Bayern</td><td>5</td></tr>
+                            <tr><td>5</td><td>Mbappe</td><td>PSG</td><td>5</td></tr>
+                            <tr><td>6</td><td>Harry Kane</td><td>Ajax</td><td>4</td></tr>
+                            <tr><td>7</td><td>Karim Benzema</td><td>Real Madrid</td><td>4</td></tr>
+                            <tr><td>8</td><td>Luis Suarez</td><td>Barcelona</td><td>3</td></tr>
+                            <tr><td>9</td><td>Wayne Rooney</td><td>Man United</td><td>3</td></tr>
+                            <tr><td>10</td><td>Erling Haaland</td><td>Man City</td><td>3</td></tr>
+                        </tbody>
+                    </table>
+                    <div class="full-link">
+                        <a href="#" class="text-primary">Full ranking link</a>
+                    </div>
+                </div>
+        
+                <!-- Top Assists Leaders -->
+                <div class="table-wrapper">
+                    <h4 class="text-center football-heading fw-bold"> Top 10 Assists Leaders</h4>
+                    <table class="table table-striped table-bordered text-center">
+                        <thead>
+                            <tr>
+                                <th>Rank</th>
+                                <th>Player</th>
+                                <th>Team</th>
+                                <th>Assists</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="first-row">
+                                <td>1</td>
+                                <td><img src="player/kevin.webp" class="player-img"> Kevin</td>
+                                <td>Man City</td>
+                                <td>6</td>
+                            </tr>
+                            <tr><td>2</td><td>Zinedine Zidane</td><td>France</td><td>5</td></tr>
+                            <tr><td>3</td><td>Xavi</td><td>Barcelona</td><td>5</td></tr>
+                            <tr><td>4</td><td>David Silva</td><td>Man City</td><td>4</td></tr>
+                            <tr><td>5</td><td>Luka Modric</td><td>Real Madrid</td><td>4</td></tr>
+                            <tr><td>6</td><td>Mesut Ozil</td><td>Arsenal</td><td>4</td></tr>
+                            <tr><td>7</td><td>Angel Di Maria</td><td>PSG</td><td>3</td></tr>
+                            <tr><td>8</td><td>Thomas Muller</td><td>Bayern</td><td>3</td></tr>
+                            <tr><td>9</td><td>Bruno Fernandes</td><td>Man Utd</td><td>3</td></tr>
+                            <tr><td>10</td><td>Eden Hazard</td><td>Chelsea</td><td>3</td></tr>
+                        </tbody>
+                    </table>
+                    <div class="full-link">
+                        <a href="#" class="text-primary">Full ranking link</a>
+                    </div>
+                </div>
+        
+                <!-- Most Clean Sheets -->
+                <div class="table-wrapper">
+                    <h4 class="text-center football-heading fw-bold">Red Cards</h4>
+                    <table class="table table-striped table-bordered text-center">
+                        <thead>
+                            <tr>
+                                <th>Rank</th>
+                                <th>Player</th>
+                                <th>Team</th>
+                                <th>Red Cards</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td> Manuel Neuer</td>
+                                <td>Bayern</td>
+                                <td>1</td>
+                            </tr>
+                            <tr><td>1</td><td>Gianluigi Buffon</td><td>Italy</td><td>1</td></tr>
+                            <tr><td>1</td><td>Alisson Becker</td><td>Liverpool</td><td>1</td></tr>
+                            <tr><td>1</td><td>Ederson</td><td>Man City</td><td>1</td></tr>
+                            <!-- <tr><td>5</td><td>Thibaut Courtois</td><td>Real Madrid</td><td>5</td></tr>
+                            <tr><td>6</td><td>Jan Oblak</td><td>Atletico</td><td>5</td></tr>
+                            <tr><td>7</td><td>Petr Cech</td><td>Chelsea</td><td>5</td></tr>
+                            <tr><td>8</td><td>David De Gea</td><td>Man Utd</td><td>4</td></tr>
+                            <tr><td>9</td><td>Iker Casillas</td><td>Real Madrid</td><td>4</td></tr>
+                            <tr><td>10</td><td>Hugo Lloris</td><td>France</td><td>3</td></tr> -->
+                            
+                        </tbody>
+                    </table>
+                    <div class="full-link">
+                        <!-- <a href="#" class="text-success">Full ranking link</a> -->
+                    </div>
+                </div>
+        
+            </div>
+        </div>
+
+        <div class=" mt-4">
+            <h2 class="container text-center mb-4 text-primary fw-bold mt-5 heading"  > Top Player Stats</h2>
+        
+            <div class="row m-4">
+                <!-- Big Vertical Card -->
+                <div class="col-md-6 ">
+                    <div class="card h-100">
+                        <img src="news/bayern_muenchen_v_manchester_united_-_friendly_match.avif" class="card-img-top" alt="Big Card Image">
+                        <div class="card-body">
+                            <h5 class="card-title">Big Card Title</h5>
+                            <p class="card-text">This is a bigger vertical card.</p>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Normal Card beside the big one -->
+                <div class="col-md-6">
+                    <div class="card">
+                        <img src="news/madrid.avif" class="card-img-top" alt="Normal Card Image">
+                        <div class="card-body">
+                            <h5 class="card-title">Normal Card</h5>
+                            <p class="card-text">This is a normal-sized card.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Second Row with 3 Normal Cards (Bottom Right) -->
+            <div class="row mt-3 justify-content-end m-4">
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="news/cr7.webp" class="card-img-top" alt="Card 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Card 1</h5>
+                            <p class="card-text">Card description here.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="news/coach.avif" class="card-img-top" alt="Card 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Card 2</h5>
+                            <p class="card-text">Card description here.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="news/messi.webp" class="card-img-top" alt="Card 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Card 3</h5>
+                            <p class="card-text">Card description here.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    
+    </div>
+
+
+
+</body>
+
+</html>
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+    integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

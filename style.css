@@ -1,0 +1,284 @@
+* {
+    margin: 0;
+    /* width: 100%; */
+
+}
+
+body {
+    background: linear-gradient(135deg, #001f3f, #003366, #004080);
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://www.transparenttextures.com/patterns/asfalt-dark.png'); /* Subtle texture */
+    opacity: 0.1;
+    z-index: -1;
+}
+
+h4,
+h2 {
+    color: #d7e7ff;
+
+}
+
+body {
+    font-style: "Oswald", sans-serif;
+    background-color: lightgrey;
+}
+
+.container {
+    /* margin: 24px 95px 0px; */
+
+}
+
+.scroll-container {
+    width: 100%;
+    /* Ensures it takes full width */
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Scrollable Wrapper */
+.scroll-wrapper {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    gap: 15px;
+    padding: 10px;
+    white-space: nowrap;
+    scrollbar-width: none;
+    /* Hide scrollbar in Firefox */
+    scroll-snap-type: x mandatory;
+    /* Enables smooth snapping */
+}
+
+/* Hide scrollbar for Chrome, Safari */
+.scroll-wrapper::-webkit-scrollbar {
+    display: none;
+}
+
+/* Card Styling */
+.event-card {
+    flex: 0 0 calc(25% - 15px);
+    width: 500px;
+    text-align: center;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    scroll-snap-align: start;
+    /* Ensures proper snapping */
+    transition: transform 0.3s ease-in-out;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+.event-card:hover {
+    transform: scale(1.05);
+}
+
+
+/* Team Logo */
+.team-logo {
+    width: 50px;
+    height: 50px;
+}
+
+/* Score Styling */
+.score {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.btn{
+    background-color: #d7e7ff;
+    color: #222;
+}
+
+/* See All Button */
+.see-all {
+    float: right;
+    text-decoration: none;
+    font-weight: bold;
+    color: #b2bac2;
+}
+
+li:hover {
+    transform: scale(1.05);
+}
+
+.venue-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    /* Rounded corners */
+}
+
+.venue-card img {
+    transition: 0.5s;
+    width: 100%;
+    height: auto;
+}
+
+.venue-card-body {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: 0.5s;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    text-shadow: 2px 2px 5px black;
+}
+
+.venue-card:hover img {
+    filter: blur(5px);
+    /* Blurs the image */
+}
+
+.venue-card:hover .venue-card-body {
+    opacity: 1;
+}
+
+.event-card p strong,
+.event-card p,
+.event-card,
+.score {
+    color: black;
+}
+
+
+.football-heading{
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+.event-card img {
+    height: 60px;
+    width: 60px;
+}
+
+.standings img{
+    height: 25px;
+    width: 30px;
+    padding-right: 5px;
+}
+
+.table{
+    border-radius: 10px; /* Rounded corners */
+    overflow: hidden; /* Ensures the border-radius applies properly */
+}
+
+.table th {
+    background-color: #d7e7ff;
+    
+}
+.first-row {
+    height: 80px; /* Larger height for first-ranked player */
+    /* padding-bottom: 10px; */
+}
+.player-img {
+    width: 84px;
+    height: 90px;
+    /* border-radius: 50%; */
+   
+}
+
+
+.full-link {
+    text-align: right;
+    font-weight: bold;
+}
+
+.table-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    overflow-x: auto; /* Enables scrolling if needed */
+    padding-bottom: 10px;
+}
+.table-wrapper {
+    flex: 1;
+    min-width: 350px;
+    max-width: 400px;
+}
+
+
+
+
+
+
+.table td, .table th {
+    padding: 12px; /* Adds spacing between rows */
+    text-align: center;
+    vertical-align: middle;
+}
+
+
+
+
+
+.heading {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 32px;
+    color: #222;
+    background: #d7e7ff;
+    padding: 10px 15px;
+    border-radius: 8px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.card {
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: rgba(255, 255, 255, 0.534);
+    backdrop-filter: blur(10px);
+    
+}
+
+/* Hover Effect */
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Image Styling */
+.card img {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    height: 270px;
+    object-fit: cover;
+}
+
+/* Big Card */
+.big-card {
+    height: 100%;
+}
+
+.big-card img {
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Card Body */
+.card-body {
+    text-align: center;
+    padding: 20px;
+}
+
+/* Responsive Spacing */
+.mt-3 {
+    margin-top: 20px;
+}
