@@ -299,7 +299,7 @@ li:hover {
     .table-wrapper {
         min-width: 90vw; /* Ensure visibility on small screens */
         max-width: 100%; /* Allow full width usage */
-        margin-right: 30px;
+        margin-right: 80px;
     }
 
 
@@ -382,11 +382,11 @@ li:hover {
     }
 
     .card img {
-        width: 380px;
+        width: 340px;
     }
 
     .card{
-        width: 380px;
+        width: 340px;
     }
 
     
