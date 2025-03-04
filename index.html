@@ -44,19 +44,74 @@
                     <a class="nav-link" href="#">Venues</a>
                     <a class="nav-link" href="#">Stats</a>
                     <a class="nav-link" href="news.html">News</a>
-                    <a class="nav-link" href="/index.html#main-4">Contact</a>
+                    <!-- <a class="nav-link" href="/index.html#main-4">Contact</a> -->
+                </div>
+                <div class="d-flex">
+                    <button class="btn btn-custom btn-login me-2" data-bs-toggle="modal"
+                        data-bs-target="#loginModal">Login</button>
+                    <button class="btn btn-custom btn-signup" data-bs-toggle="modal" data-bs-target="#signupModal">Sign
+                        Up</button>
                 </div>
             </div>
-            <img src="sponsors/adidas.png" class="float-end d-none d-lg-block"
-                style="height: 50px; padding-right: 20px;" alt="Right Image">
-            <img src="sponsors/visa.png" class="float-end d-none d-lg-block" style="height: 50px; padding-right: 20px;"
-                alt="Right Image">
 
         </div>
     </nav>
 
-    <div class=" mb-2 text-primary-emphasis main-4">
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loginModalLabel">Login</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="loginEmail" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="loginEmail" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="loginPassword" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="loginPassword" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Login</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 
+
+    <div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="signupModalLabel">Sign Up</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="signupName" class="form-label">Full Name</label>
+                            <input type="text" class="form-control" id="signupName" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="signupEmail" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="signupEmail" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="signupPassword" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="signupPassword" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Sign Up</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class=" mb-2 text-primary-emphasis main-4">
         <div id="carouselExampleFade" class="carousel slide carousel-fade ">
             <div class="carousel-inner ">
                 <div class="carousel-item active ">
@@ -295,7 +350,7 @@
             </div>
         </div>
 
-        <div class="p-3 -cities " id="main-4">
+        <div class="p-3 -cities venue" id="main-4">
             <h2 class="container mb-1 mt-5 text-center heading">Venue</h2>
             <div class="Australia">
                 <div class=" mt-4">
@@ -406,7 +461,7 @@
         </div>
 
         <!-- Top Goal Scorers -->
-        <div class="p-3 stats-container">
+        <div class="p-3 stats-container stats">
             <h2 class="container text-center mb-4 text-primary fw-bold mt-5 heading"> Top Player Stats</h2>
 
             <div class="table-container">
@@ -621,66 +676,90 @@
         </div>
 
         <!-- news -->
-        <div class="news-container mt-4">
-
-            <div class="news-container mt-4">
-                <h2 class="container text-center mb-4 text-primary fw-bold mt-5 heading">NEWS</h2>
-
-                <div class="container">
-                    <!-- News Section -->
-                    <div class="row news-scroll">
-                        <div class="col-md-6 col-sm-12">
-                            <div class="card">
-                                <img src="news/bayern_muenchen_v_manchester_united_-_friendly_match.avif"
-                                    class="card-img-top" alt="Card 1">
-                                <div class="card-body">
-                                    <h5 class="card-title">Card 1</h5>
-                                    <p class="card-text">This is the first card.</p>
-                                </div>
+        
+            <h2 class="container text-center mb-4 text-primary fw-bold mt-5 heading">NEWS</h2>
+            <div class="container">
+                <!-- News Section -->
+                <div class="row news-scroll">
+                    <div class="col-md-6 col-sm-12">
+                        <div class="card">
+                            <img src="news/bayern_muenchen_v_manchester_united_-_friendly_match.avif"
+                                class="card-img-top" alt="Card 1">
+                            <div class="card-body">
+                                <h5 class="card-title">Card 1</h5>
+                                <p class="card-text">This is the first card.</p>
                             </div>
                         </div>
-                        <div class="col-md-6 col-sm-12">
-                            <div class="card">
-                                <img src="news/madrid.avif" class="card-img-top" alt="Card 2">
-                                <div class="card-body">
-                                    <h5 class="card-title">Card 2</h5>
-                                    <p class="card-text">This is the second card.</p>
-                                </div>
+                    </div>
+                    <div class="col-md-6 col-sm-12">
+                        <div class="card">
+                            <img src="news/madrid.avif" class="card-img-top" alt="Card 2">
+                            <div class="card-body">
+                                <h5 class="card-title">Card 2</h5>
+                                <p class="card-text">This is the second card.</p>
                             </div>
                         </div>
-                        <div class="col-md-4 col-sm-12">
-                            <div class="card">
-                                <img src="news/cr7.webp" class="card-img-top" alt="Card 3">
-                                <div class="card-body">
-                                    <h5 class="card-title">Card 3</h5>
-                                    <p class="card-text">This is the third card.</p>
-                                </div>
+                    </div>
+                    <div class="col-md-4 col-sm-12">
+                        <div class="card">
+                            <img src="news/cr7.webp" class="card-img-top" alt="Card 3">
+                            <div class="card-body">
+                                <h5 class="card-title">Card 3</h5>
+                                <p class="card-text">This is the third card.</p>
                             </div>
                         </div>
-                        <div class="col-md-4 col-sm-12">
-                            <div class="card">
-                                <img src="news/coach.avif" class="card-img-top" alt="Card 4">
-                                <div class="card-body">
-                                    <h5 class="card-title">Card 4</h5>
-                                    <p class="card-text">This is the fourth card.</p>
-                                </div>
+                    </div>
+                    <div class="col-md-4 col-sm-12">
+                        <div class="card">
+                            <img src="news/coach.avif" class="card-img-top" alt="Card 4">
+                            <div class="card-body">
+                                <h5 class="card-title">Card 4</h5>
+                                <p class="card-text">This is the fourth card.</p>
                             </div>
                         </div>
-                        <div class="col-md-4 col-sm-12">
-                            <div class="card">
-                                <img src="news/messi.webp" class="card-img-top" alt="Card 5">
-                                <div class="card-body">
-                                    <h5 class="card-title">Card 5</h5>
-                                    <p class="card-text">This is the fifth card.</p>
-                                </div>
+                    </div>
+                    <div class="col-md-4 col-sm-12">
+                        <div class="card">
+                            <img src="news/messi.webp" class="card-img-top" alt="Card 5">
+                            <div class="card-body">
+                                <h5 class="card-title">Card 5</h5>
+                                <p class="card-text">This is the fifth card.</p>
                             </div>
                         </div>
                     </div>
                 </div>
+            
+        </div>
+
+
+        <h2 class="container text-center mb-4 text-primary fw-bold mt-5 heading">Official Sponsors</h2>
+        <div class="sponsor-container">
+            <div class="static-sponsor">
+                <p>Title Partner</p>
+                <img src="/sponsors/adidas.png" alt="Sponsor 1" height="70">
             </div>
+            <div class="scrolling-container">
+
+                <div class="scrolling-logos">
+                    <img src="sponsers/disney.webp" alt="Star Sports">
+                    <img src="sponsers/fox.webp" alt="SuperSport">
+                    <img src="sponsers/johnson.webp" alt="Hotstar">
+                    <img src="sponsers/dp.webp">
+                    <img src="sponsers/s.webp" alt="Sports 18">
+
+                    <!-- Duplicate images for smooth looping -->
+                    <img src="sponsers/sky.webp" alt="Star Sports">
+                    <img src="sponsers/stis.webp" alt="SuperSport">
+                    <img src="sponsers/thom.webp" alt="Hotstar">
+                    <img src="sponsers/ucl.svg" alt="Sky Sports">
+                    <img src="sponsers/willow.webp" alt="Sports 18">
+                </div>
+            </div>
+
         </div>
 
     </div>
+
 
 
 

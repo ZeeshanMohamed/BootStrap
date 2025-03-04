@@ -28,11 +28,48 @@ h2 {
     color: #d7e7ff;
 
 }
-
-body {
-    font-style: "Oswald", sans-serif;
-    background-color: lightgrey;
+.navbar {
+    background: linear-gradient(90deg, #002147, #0033A0); /* Dark blue gradient */
 }
+.navbar-brand {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #FFD700 !important; /* Gold color */
+}
+.navbar-nav .nav-link {
+    color: #ffffff !important;
+    font-weight: 500;
+}
+.navbar-nav .nav-link:hover {
+    color: #FFD700 !important; /* Gold hover effect */
+}
+.btn-custom {
+    font-weight: bold;
+    padding: 8px 16px;
+    border-radius: 30px;
+}
+.btn-login {
+    border: 2px solid #FFD700; /* Gold border */
+    color: #FFD700;
+}
+.btn-login:hover {
+    background: #FFD700;
+    color: #002147;
+}
+.btn-signup {
+    background: #FFD700;
+    color: #002147;
+}
+.btn-signup:hover {
+    background: #FFC107;
+    color: #002147;
+}
+
+.modal-content{
+    color: black;
+}
+
+/* ----------------------------------------------- */
 
 .container {
     /* margin: 24px 95px 0px; */
@@ -121,6 +158,16 @@ li:hover {
     border-radius: 10px;
     /* Rounded corners */
 }
+
+.venue{
+    background: linear-gradient(to bottom, #002147, white, #002147);
+}
+
+.stats{
+    background:  #002147;
+
+}
+
 
 .venue-card img {
     transition: 0.5s;
@@ -279,9 +326,13 @@ li:hover {
 }
 
 .news-container {
-    padding: 20px;
+    /* padding: 20px; */
     margin: 0px;
+    background: linear-gradient(to bottom, #002147, white, #002147);
 }
+
+   
+
 
 .card {
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
@@ -331,10 +382,88 @@ li:hover {
     }
 
     .card img {
-        width: 280px;
+        width: 380px;
     }
 
     .card{
-        width: 280px;
+        width: 380px;
+    }
+
+    
+}
+
+
+/* ------------------ */
+.sponsor-container {
+    display: flex;
+    align-items: center;
+    /* background: linear-gradient(to right, #0a2a43, #012e57); */
+    padding: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    white-space: nowrap;
+    color: white;
+}
+
+.sponsers{
+    background: #002147;
+    margin-top: 0px;
+
+}
+
+.sponsors-title {
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    color: #fff;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 8px rgba(255, 255, 255, 0.3);
+}
+/* Static Sponsor Box */
+.static-sponsor {
+    min-width: 140px; /* Fixed width */
+    /* background: #0a2a43; */
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+/* Scrolling Carousel */
+.scrolling-container {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+    margin-left: 20px; /* Ensures space after the static box */
+}
+
+.scrolling-logos {
+    display: flex;
+    animation: scroll 10s linear infinite; /* Continuous animation */
+}
+
+.scrolling-logos img {
+    height: 30px;
+    margin: 0 15px;
+}
+
+/* Animation */
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); } /* Adjust speed by changing time */
+}
+
+
+/* Duplicate images for seamless loop */
+.scrolling-logos::after {
+    content: "";
+    display: flex;
+    animation: inherit;
+}
+@media (max-width: 576px){
+    .static-sponsor {
+        /* width: 60%; */
     }
 }
