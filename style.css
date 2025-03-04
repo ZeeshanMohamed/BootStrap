@@ -382,11 +382,11 @@ li:hover {
     }
 
     .card img {
-        width: 340px;
+        width: 330px;
     }
 
     .card{
-        width: 340px;
+        width: 330px;
     }
 
     
@@ -466,4 +466,64 @@ li:hover {
     .static-sponsor {
         /* width: 60%; */
     }
+}
+
+
+
+.footer {
+    background: linear-gradient(to right, #111, #222, #111);
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+.footer-logo {
+    width: 150px;
+    margin-bottom: 10px;
+}
+
+.footer-text {
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+.footer-heading {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 5px;
+}
+
+.footer-links a {
+    color: #ddd;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer-links a:hover {
+    color: #f5a623;
+}
+
+.footer-socials a {
+    font-size: 20px;
+    margin: 0 10px;
+    color: white;
+    transition: 0.3s;
+}
+
+.footer-socials a:hover {
+    color: #f5a623;
+}
+
+.footer-bottom {
+    font-size: 14px;
+    opacity: 0.6;
 }
