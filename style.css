@@ -222,29 +222,34 @@ li:hover {
 }
 /* --------------------------------------------- */
 .table{
-    border-radius: 10px; /* Rounded corners */
-    overflow: hidden; /* Ensures the border-radius applies properly */
+    border-radius: 10px; 
+    overflow: hidden; 
 }
 
 .table th {
     background-color: #d7e7ff;
+   
     
 }
 .first-row {
-    height: 80px; /* Larger height for first-ranked player */
-    /* padding-bottom: 10px; */
+    height: 80px; 
 }
 .player-img {
     width: 84px;
     height: 90px;
-    /* border-radius: 50%; */
    
 }
 
+.sub-head{
+    color: #d7e7ff;
+    font-family: 'Bebas Neue', sans-serif;
+}
 
 .full-link {
     text-align: right;
     font-weight: bold;
+    color: #d7e7ff;
+    font-family: 'Bebas Neue', sans-serif;
 }
 
 .table-container {
@@ -253,60 +258,46 @@ li:hover {
     gap: 20px;
     overflow-x: auto; /* Enables scrolling if needed */
     padding-bottom: 10px;
+    width: 90%;
 }
 .table-wrapper {
     flex: 1;
     min-width: 350px;
     max-width: 400px;
 }
-
-
-
-
 
 
 .table td, .table th {
     padding: 12px; 
+    font-family: 'Bebas Neue', sans-serif;
+    font-weight: lighter;
     text-align: center;
     vertical-align: middle;
 }
 
-
-
-
-
-
-
-
-
-
-.table-wrapper {
-    flex: 1;
-    min-width: 350px;
-    max-width: 400px;
-}
-
-@media (max-width: 768px) {
-    .table-container {
-        display: flex;
-        flex-direction: row;
-        overflow-x: auto;
-        white-space: nowrap;
-        scroll-behavior: smooth;
-        padding-bottom: 10px;
-    }
+.res-stat-table{
     
-    .table-wrapper {
-        min-width: 90vw; /* Ensure visibility on small screens */
-        max-width: 100%; /* Allow full width usage */
-        margin-right: 80px;
-    }
 
-
-    .table {
-        width: 100%; /* Ensure tables take full width */
-    }
 }
+
+.red-card{
+    height: 595px;
+}
+.table-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .table {
+            background-color: white;
+            color: black;
+        }
+        @media (max-width: 768px) {
+            .table-container {
+                display: block;
+            }
+        }
 
 
 
