@@ -27,17 +27,18 @@
 
 <body>
 
-    <nav class="navbar navbar-expand-lg bg-body-tertiary navbar-dark border-bottom border-body" data-bs-theme="dark">
+    <nav class="navbar navbar-expand-lg navbar-dark border-bottom border-body" data-bs-theme="dark">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
-                <img src="im/wcl-logo-removebg-preview.png" alt="Bootstrap" width="70" height="64">
+                <img src="im/wcl-logo-removebg-preview.png" alt="Logo" width="70" height="64">
             </a>
-          
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
-                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+
+            <!-- Toggler Button -->
+            <button class="navbar-toggler" type="button" id="navToggler" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            
+
+            <!-- Collapsible Menu -->
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
                     <a class="nav-link active" aria-current="page" href="#">Home</a>
@@ -54,9 +55,33 @@
                         Up</button>
                 </div>
             </div>
-        
         </div>
     </nav>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- ✅ Fix for Navbar Refresh Issue -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var navbarToggler = document.getElementById("navToggler");
+            var navbarCollapse = document.getElementById("navbarNavAltMarkup");
+
+            navbarToggler.addEventListener("click", function (event) {
+                event.preventDefault(); // ✅ Prevents refresh
+                
+                var isExpanded = navbarToggler.getAttribute("aria-expanded") === "true";
+
+                if (isExpanded) {
+                    navbarToggler.setAttribute("aria-expanded", "false");
+                    navbarCollapse.classList.remove("show");
+                } else {
+                    navbarToggler.setAttribute("aria-expanded", "true");
+                    navbarCollapse.classList.add("show");
+                }
+            });
+        });
+    </script>
 
 
     <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
@@ -742,7 +767,7 @@
                                 </tr>
                             </tbody>
                         </table>
-                        <div class="full-link pr-3">
+                        <div class="full-link ">
                             <a href="#" class="text-primary ">Full ranking link</a>
                         </div>
                     </div>

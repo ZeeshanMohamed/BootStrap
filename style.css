@@ -46,6 +46,49 @@ h2 {
 .navbar-nav .nav-link:hover {
     color: #FFD700 !important; /* Gold hover effect */
 }
+
+
+.navbar {
+            background: linear-gradient(90deg, #002147, #0033A0);
+        }
+        .navbar-brand {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #FFD700 !important;
+        }
+        .navbar-nav .nav-link {
+            color: #ffffff !important;
+            font-weight: 500;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        }
+        .navbar-nav .nav-link:hover {
+            color: #FFD700 !important;
+        }
+        
+        /* Ensure dropdown menu is fixed properly */
+        @media (max-width: 768px) {
+            .navbar-collapse {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: #003366;
+                padding: 10px;
+                display: none;
+                z-index: 1000;
+            }
+            .navbar-toggler[aria-expanded="true"] + .navbar-collapse {
+                display: block;
+            }
+        }
+
+
+
+
+
+
+
+
 .btn-custom {
     font-weight: bold;
     padding: 8px 16px;
