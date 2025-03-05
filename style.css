@@ -366,6 +366,7 @@ li:hover {
         /* padding: 26px;new */
         scrollbar-width: none; 
         -ms-overflow-style: none; 
+        padding-right: 10px;
     }
 
     .news-scroll::-webkit-scrollbar {
