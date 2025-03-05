@@ -5,9 +5,10 @@
 }
 
 body {
-    background: linear-gradient(135deg, #001f3f, #003366, #004080);
+    /* background: linear-gradient(135deg, #001f3f, #003366, #004080); */
     color: #ffffff;
     font-family: 'Poppins', sans-serif;
+    background: linear-gradient(90deg, #002147, #0033A0); 
 }
 
 
@@ -29,7 +30,7 @@ h2 {
 
 }
 .navbar {
-    background: linear-gradient(90deg, #002147, #0033A0); /* Dark blue gradient */
+    background: linear-gradient(90deg, #002147, #0033A0); 
 }
 .navbar-brand {
     font-size: 1.8rem;
@@ -162,7 +163,7 @@ li:hover {
 }
 
 .venue{
-    background: linear-gradient(to bottom, #002147, white, #002147);
+    /* background: linear-gradient(to bottom, #002147, white, #002147); */
 }
 
 .stats{
@@ -269,7 +270,7 @@ li:hover {
 }
 .table-wrapper {
     flex: 1;
-    min-width: 350px;
+    min-width: 250px;
     max-width: 400px;
 }
 
@@ -283,6 +284,8 @@ li:hover {
 }
 
 .res-stat-table{
+    width: 95%;
+    margin-left: 10px;
     
 
 }
@@ -360,7 +363,7 @@ li:hover {
         flex-wrap: nowrap;
         overflow-x: auto;
         gap: 15px; 
-        padding-bottom: 10px;
+        padding: 26px;
         scrollbar-width: none; 
         -ms-overflow-style: none; 
     }
