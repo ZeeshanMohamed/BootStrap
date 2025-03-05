@@ -21,23 +21,13 @@
 
     <link rel="stylesheet" href="style.css">
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Bootstrap JavaScript (needed for toggling) -->
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
-
-    <style>
-
-    </style>
-
 </head>
 
 <body>
 
-    <nav class="navbar navbar-expand-lg bg-body-tertiary" class="navbar bg-dark border-bottom border-body"
-        data-bs-theme="dark">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary navbar-dark border-bottom border-body" data-bs-theme="dark">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
                 <img src="im/wcl-logo-removebg-preview.png" alt="Bootstrap" width="70" height="64">
@@ -46,15 +36,15 @@
                 aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
+
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
                     <a class="nav-link active" aria-current="page" href="#">Home</a>
-                    <a class="nav-link" href="#">Matches</a>
-                    <a class="nav-link" href="#">Standings</a>
-                    <a class="nav-link" href="#">Venues</a>
-                    <a class="nav-link" href="#">Stats</a>
-                    <a class="nav-link" href="news.html">News</a>
-                    <!-- <a class="nav-link" href="/index.html#main-4">Contact</a> -->
+                    <a class="nav-link" href="#matches">Matches</a>
+                    <a class="nav-link" href="#standings">Standings</a>
+                    <a class="nav-link" href="#venues-section">Venues</a>
+                    <a class="nav-link" href="#stats">Stats</a>
+                    <a class="nav-link" href="#news">News</a>
                 </div>
                 <div class="d-flex ms-auto">
                     <button class="btn btn-custom btn-login me-2" data-bs-toggle="modal"
@@ -63,9 +53,9 @@
                         Up</button>
                 </div>
             </div>
-
         </div>
     </nav>
+
 
     <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
         <div class="modal-dialog">
@@ -161,7 +151,7 @@
             </button>
         </div>
 
-        <div class=" p-3 mt-4 text-center">
+        <div class=" p-3 mt-4 text-center" id="matches">
             <h3 class="container text-center display-7 fw-bold text-uppercase d-flex justify-content-center text-dark p-3 rounded"
                 style="background-color: #d7e7ff; color: #22313f; font-family: 'Bebas Neue', sans-serif;">
                 Fixtures and Results
@@ -238,7 +228,7 @@
                     <div class="event-card">
                         <h5 class="card-title">Match 6</h5>
                         <div class="d-flex justify-content-center align-items-center">
-                            <img src="teams/brazil.png.png" class="team-logo ms-2" alt="Team 4">
+                            <img src="teams/brazil.png" class="team-logo ms-2" alt="Team 4">
                             <span class="score">1 - 3</span>
                             <img src="teams/bayren.png" class="team-logo me-2" alt="Team 3">
                         </div>
@@ -299,7 +289,7 @@
             </div>
         </div>
 
-        <div class="p-3 mt-4 standings" style="background: url(carousel/);">
+        <div class="p-3 mt-4 standings" id="standings" style="background: url(carousel/);">
             <h3 class="container text-center display-7 fw-bold text-uppercase   p-3 rounded"
                 style="font-family: 'Bebas Neue', sans-serif; background-color: #d7e7ff;">
                 Standings
@@ -360,11 +350,11 @@
             </div>
         </div>
 
-        <div class="p-3 -cities venue" id="main-4">
+        <div class="p-3 -cities venue" id="main-4" id="venues-section">
             <h2 class="container mb-1 mt-5 text-center heading">Venue</h2>
             <div class="Australia">
                 <div class=" mt-4">
-                    <h4 class="mb-2" style="color: #d7e7ff;">Australia</h4>
+                    <h4 class="mb-2" style="color: #9ec4fc; text-shadow: 2px 2px 5px rgb(0, 0, 0);">Australia</h4>
                     <div class="row g-3">
                         <div class="col-md-3">
                             <div class="venue-card">
@@ -426,7 +416,7 @@
 
                 <div class="New Zealand">
                     <div class=" mt-4">
-                        <h4 class="mb-2" style="color: #d7e7ff;">New Zealand</h4>
+                        <h4 class="mb-2" style="color: #9ec4fc; text-shadow: 2px 2px 5px rgb(0, 0, 0);">New Zealand</h4>
                         <div class="row g-3">
                             <div class="col-md-3">
                                 <div class="venue-card">
@@ -471,7 +461,7 @@
         </div>
 
         <!-- Top Goal Scorers -->
-        <div class=" mt-4 d-none d-md-block">
+        <div class=" mt-4 d-none d-md-block" id="stats">
             <h2 class="container mb-5 mt-5 text-center heading">Stats</h2>
             <div class="table-container">
                 <div class="table-responsive">
@@ -492,11 +482,36 @@
                                 <td class="first">Barcelona</td>
                                 <td class="first">7</td>
                             </tr>
-                            <tr><td>2</td><td>Cristiano Ronaldo</td><td>Real Madrid</td><td>6</td></tr>
-                            <tr><td>3</td><td>Neymar</td><td>PSG</td><td>6</td></tr>
-                            <tr><td>4</td><td>Lewandowski</td><td>Bayern</td><td>5</td></tr>
-                            <tr><td>5</td><td>Mbappe</td><td>PSG</td><td>5</td></tr>
-                            <tr><td>6</td><td>Harry Kane</td><td>Ajax</td><td>4</td></tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Cristiano Ronaldo</td>
+                                <td>Real Madrid</td>
+                                <td>6</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Neymar</td>
+                                <td>PSG</td>
+                                <td>6</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Lewandowski</td>
+                                <td>Bayern</td>
+                                <td>5</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>Mbappe</td>
+                                <td>PSG</td>
+                                <td>5</td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>Harry Kane</td>
+                                <td>Ajax</td>
+                                <td>4</td>
+                            </tr>
                             <tr>
                                 <td>7</td>
                                 <td>Karim Benzema</td>
@@ -545,10 +560,30 @@
                                 <td>Man City</td>
                                 <td>6</td>
                             </tr>
-                            <tr><td>2</td><td>Zinedine Zidane</td><td>France</td><td>5</td></tr>
-                            <tr><td>3</td><td>Xavi</td><td>Barcelona</td><td>5</td></tr>
-                            <tr><td>4</td><td>David Silva</td><td>Man City</td><td>4</td></tr>
-                            <tr><td>5</td><td>Luka Modric</td><td>Real Madrid</td><td>4</td></tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Zinedine Zidane</td>
+                                <td>France</td>
+                                <td>5</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Xavi</td>
+                                <td>Barcelona</td>
+                                <td>5</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>David Silva</td>
+                                <td>Man City</td>
+                                <td>4</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>Luka Modric</td>
+                                <td>Real Madrid</td>
+                                <td>4</td>
+                            </tr>
                             <tr>
                                 <td>6</td>
                                 <td>Mesut Ozil</td>
@@ -597,17 +632,37 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr><td>1</td><td>Manuel Neuer</td><td>Bayern</td><td>1</td></tr>
-                            <tr><td>1</td><td>Gianluigi Buffon</td><td>Italy</td><td>1</td></tr>
-                            <tr><td>1</td><td>Alisson Becker</td><td>Liverpool</td><td>1</td></tr>
-                            <tr><td>1</td><td>Ederson</td><td>Man City</td><td>1</td></tr>
+                            <tr>
+                                <td>1</td>
+                                <td>Manuel Neuer</td>
+                                <td>Bayern</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>Gianluigi Buffon</td>
+                                <td>Italy</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>Alisson Becker</td>
+                                <td>Liverpool</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>Ederson</td>
+                                <td>Man City</td>
+                                <td>1</td>
+                            </tr>
                         </tbody>
                     </table>
                 </div>
             </div>
         </div>
-    
-        <div id="carouselExample" class="carousel slide d-md-none" data-bs-ride="carousel">
+
+        <div id="carouselExample" class="carousel slide d-md-none" data-bs-ride="carousel" id="stats">
             <div class="carousel-inner">
                 <h2 class="container mb-5 mt-5 text-center heading">Stats</h2>
                 <div class="carousel-item active">
@@ -615,7 +670,12 @@
                         <h4 class="text-center sub-head">Top 10 Goal Scorers</h4>
                         <table class="table table-bordered text-center res-stat-table">
                             <thead class="table-dark ">
-                                <tr><th>Rank</th><th>Player</th><th>Team</th><th>Goals</th></tr>
+                                <tr>
+                                    <th>Rank</th>
+                                    <th>Player</th>
+                                    <th>Team</th>
+                                    <th>Goals</th>
+                                </tr>
                             </thead>
                             <tbody>
                                 <tr class="first-row">
@@ -624,11 +684,36 @@
                                     <td class="first">Barcelona</td>
                                     <td class="first">7</td>
                                 </tr>
-                                <tr><td>2</td><td>Cristiano Ronaldo</td><td>Real Madrid</td><td>6</td></tr>
-                                <tr><td>3</td><td>Neymar</td><td>PSG</td><td>6</td></tr>
-                                <tr><td>4</td><td>Lewandowski</td><td>Bayern</td><td>5</td></tr>
-                                <tr><td>5</td><td>Mbappe</td><td>PSG</td><td>5</td></tr>
-                                <tr><td>6</td><td>Harry Kane</td><td>Ajax</td><td>4</td></tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Cristiano Ronaldo</td>
+                                    <td>Real Madrid</td>
+                                    <td>6</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>Neymar</td>
+                                    <td>PSG</td>
+                                    <td>6</td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>Lewandowski</td>
+                                    <td>Bayern</td>
+                                    <td>5</td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>Mbappe</td>
+                                    <td>PSG</td>
+                                    <td>5</td>
+                                </tr>
+                                <tr>
+                                    <td>6</td>
+                                    <td>Harry Kane</td>
+                                    <td>Ajax</td>
+                                    <td>4</td>
+                                </tr>
                                 <tr>
                                     <td>7</td>
                                     <td>Karim Benzema</td>
@@ -652,7 +737,7 @@
                                     <td>Erling Haaland</td>
                                     <td>Man City</td>
                                     <td>3</td>
-                                </tr>    
+                                </tr>
                             </tbody>
                         </table>
                         <div class="full-link">
@@ -665,7 +750,12 @@
                         <h4 class="text-center sub-head">Top 10 Assists Leaders</h4>
                         <table class="table table-bordered text-center res-stat-table">
                             <thead class="table-dark">
-                                <tr><th>Rank</th><th>Player</th><th>Team</th><th>Assists</th></tr>
+                                <tr>
+                                    <th>Rank</th>
+                                    <th>Player</th>
+                                    <th>Team</th>
+                                    <th>Assists</th>
+                                </tr>
                             </thead>
                             <tbody>
                                 <tr class="first-row">
@@ -674,10 +764,30 @@
                                     <td>Man City</td>
                                     <td>6</td>
                                 </tr>
-                                <tr><td>2</td><td>Zinedine Zidane</td><td>France</td><td>5</td></tr>
-                                <tr><td>3</td><td>Xavi</td><td>Barcelona</td><td>5</td></tr>
-                                <tr><td>4</td><td>David Silva</td><td>Man City</td><td>4</td></tr>
-                                <tr><td>5</td><td>Luka Modric</td><td>Real Madrid</td><td>4</td></tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Zinedine Zidane</td>
+                                    <td>France</td>
+                                    <td>5</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>Xavi</td>
+                                    <td>Barcelona</td>
+                                    <td>5</td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>David Silva</td>
+                                    <td>Man City</td>
+                                    <td>4</td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>Luka Modric</td>
+                                    <td>Real Madrid</td>
+                                    <td>4</td>
+                                </tr>
                                 <tr>
                                     <td>6</td>
                                     <td>Mesut Ozil</td>
@@ -707,7 +817,7 @@
                                     <td>Eden Hazard</td>
                                     <td>Chelsea</td>
                                     <td>3</td>
-                                </tr>    
+                                </tr>
                             </tbody>
                         </table>
                         <div class="full-link">
@@ -720,23 +830,38 @@
                         <h4 class="text-center sub-head">Red Cards</h4>
                         <table class="table table-bordered text-center ">
                             <thead class="table-dark">
-                                <tr><th>Rank</th><th>Player</th><th>Team</th><th>Red Cards</th></tr>
+                                <tr>
+                                    <th>Rank</th>
+                                    <th>Player</th>
+                                    <th>Team</th>
+                                    <th>Red Cards</th>
+                                </tr>
                             </thead>
                             <tbody>
-                                <tr><td>1</td><td>Manuel Neuer</td><td>Bayern</td><td>1</td></tr>
-                                <tr><td>1</td><td>Gianluigi Buffon</td><td>Italy</td><td>1</td></tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Manuel Neuer</td>
+                                    <td>Bayern</td>
+                                    <td>1</td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Gianluigi Buffon</td>
+                                    <td>Italy</td>
+                                    <td>1</td>
+                                </tr>
                             </tbody>
                         </table>
                     </div>
                 </div>
             </div>
         </div>
-    
+
 
         <!-- news -->
 
         <h2 class="container text-center mb-4 text-primary fw-bold mt-5 heading">NEWS</h2>
-        <div class="container">
+        <div class="container" id="news">
             <!-- News Section -->
             <div class="row news-scroll">
                 <div class="col-md-6 col-sm-12">
@@ -793,7 +918,7 @@
         <h2 class="container text-center mb-4 text-primary fw-bold mt-5 heading">Official Sponsors</h2>
         <div class="sponsor-container">
             <div class="static-sponsor">
-                <p>Title Partner</p>
+                <p>Primary Partner</p>
                 <img src="/sponsors/adidas.png" alt="Sponsor 1" height="70">
             </div>
             <div class="scrolling-container">
@@ -873,12 +998,8 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-    crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
-    integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
-    crossorigin="anonymous"></script>
+
+
 </body>
 
 </html>
