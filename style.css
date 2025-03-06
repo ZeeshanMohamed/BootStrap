@@ -35,9 +35,8 @@ h2 {
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
 }
 
-/* Logo Styling */
-.navbar-brand img {
-    border-radius: 8px; /* Slight rounding for smoothness */
+
+.navbar-brand img {    
     transition: transform 0.3s ease-in-out;
 }
 
@@ -45,7 +44,7 @@ h2 {
     transform: scale(1.1);
 }
 
-/* Navbar Links */
+
 .navbar-nav .nav-link {
     color: white !important;
     font-weight: 500;
@@ -56,12 +55,12 @@ h2 {
 
 .navbar-nav .nav-link:hover {
     background: rgba(255, 255, 255, 0.2);
+    border-bottom: 2px solid #ff9800;
 }
 
 /* Active Link */
 .navbar-nav .nav-link.active {
     font-weight: bold;
-    border-bottom: 2px solid #ff9800;
 }
 
 /* Buttons (Login & Sign-Up) */
@@ -393,9 +392,7 @@ li:hover {
     display: flex;
     justify-content: center;
     gap: 20px;
-    overflow-x: auto; /* Enables scrolling if needed */
-    /* padding-bottom: 10px; */
-    /* width: 90%; */
+    overflow-x: auto; 
 }
 .table-wrapper {
     flex: 1;
@@ -444,6 +441,42 @@ li:hover {
 
 /* -------------------------- */
 
+
+.news-container {
+    max-width: 100%;
+    margin: 10px auto;
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+}
+.main-news img {
+    width: 100%;
+    border-radius: 10px;
+}
+.headline-news img {
+    width: 80px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+.headline-news {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    transition: 0.3s;
+}
+.headline-news:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+.headline-news p {
+    margin: 0;
+    padding-left: 10px;
+    font-size: 14px;
+}
+
 .heading {
     font-family: 'Bebas Neue', sans-serif;
     font-size: 32px;
@@ -456,72 +489,7 @@ li:hover {
     
 }
 
-.news-container {
-    /* padding: 20px; */
-    margin: 0px;
-    background: linear-gradient(to bottom, #002147, white, #002147);
-}
 
-   
-
-
-.card {
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    background: rgba(255, 255, 255, 0.534);
-    backdrop-filter: blur(10px);
-    margin-bottom: 20px;
-}
-
-/* Hover Effect */
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
-}
-
-
-.card img {
-    height: 270px;
-    object-fit: cover;
-}
-
-
-@media (max-width: 768px) {
-    .news-scroll {
-        display: flex;
-        flex-wrap: nowrap;
-        overflow-x: auto;
-        gap: 15px; 
-        /* padding: 26px;new */
-        scrollbar-width: none; 
-        -ms-overflow-style: none; 
-    }
-
-    .news-scroll::-webkit-scrollbar {
-        display: none; /* Hide scrollbar for Chrome/Safari */
-    }
-
-    .news-scroll .col-sm-12 {
-        flex: 0 0 auto;
-        width: 100%; 
-    }
-}
-
-@media (max-width: 576px) {
-    .news-scroll .col-sm-12 {
-        width: 90%;
-    }
-
-    .card img {
-        width: 330px;
-    }
-
-    .card{
-        width: 332px;
-    }
-
-    
-}
 
 
 /* ------------------ */
@@ -664,4 +632,18 @@ li:hover {
 .footer-bottom {
     font-size: 14px;
     opacity: 0.6;
+}
+
+/* --- */
+
+.text-primary{
+    font-size: 20px;
+    transition: 1s;
+    text-decoration: none;
+    
+}
+
+.text-primary:hover{
+    scale: (0.5);
+    color: white;
 }
