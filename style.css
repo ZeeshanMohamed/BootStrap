@@ -572,6 +572,10 @@ li:hover {
     .static-sponsor {
         /* width: 60%; */
     }
+
+    .group{
+        display: none;
+    }
 }
 
 
@@ -637,7 +641,7 @@ li:hover {
 /* --- */
 
 .text-primary{
-    font-size: 20px;
+    /* font-size: 20px; */
     transition: 1s;
     text-decoration: none;
     
