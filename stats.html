@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stats</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark border-bottom border-body fixed-top" data-bs-theme="dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="im/wcl-logo-removebg-preview.png" alt="Logo" width="70" height="64">
+            </a>
+
+            <!-- Toggler Button -->
+            <button class="navbar-toggler" type="button" id="navToggler" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Collapsible Menu -->
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    <a class="nav-link" href="matches.html">Matches</a>
+                    <a class="nav-link" href="standings.html">Standings</a>
+                    <a class="nav-link" href="venue.html">Venues</a>
+                    <a class="nav-link" href="stats.html">Stats</a>
+                    <a class="nav-link" href="news.html">News</a>
+                </div>
+                <div class="d-flex ms-auto">
+                    <button class="btn btn-custom btn-login me-2" data-bs-toggle="modal"
+                        data-bs-target="#loginModal">Login</button>
+                    <button class="btn btn-custom btn-signup" data-bs-toggle="modal" data-bs-target="#signupModal">Sign
+                        Up</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var navbarToggler = document.getElementById("navToggler");
+            var navbarCollapse = document.getElementById("navbarNavAltMarkup");
+
+            navbarToggler.addEventListener("click", function (event) {
+                event.preventDefault(); // ✅ Prevents refresh
+
+                var isExpanded = navbarToggler.getAttribute("aria-expanded") === "true";
+
+                if (isExpanded) {
+                    navbarToggler.setAttribute("aria-expanded", "false");
+                    navbarCollapse.classList.remove("show");
+                } else {
+                    navbarToggler.setAttribute("aria-expanded", "true");
+                    navbarCollapse.classList.add("show");
+                }
+            });
+        });
+    </script>
+
+
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loginModalLabel">Login</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="loginEmail" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="loginEmail" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="loginPassword" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="loginPassword" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Login</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="signupModalLabel">Sign Up</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="signupName" class="form-label">Full Name</label>
+                            <input type="text" class="form-control" id="signupName" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="signupEmail" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="signupEmail" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="signupPassword" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="signupPassword" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Sign Up</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class=" mt-4 d-none d-md-block margin-s" id="stats">
+        <div class="table-container m-5" id="Goal">
+            <h2 class="container text-center  text-primary fw-bold margin-s heading">STATS</h2>
+            <h4 class="text-center sub-head">Top 10 Goal Scorers</h4>
+            <table class="table table-bordered table-striped text-center">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Rank</th>
+                        <th>Player</th>
+                        <th>Team</th>
+                        <th>Goals</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="first-row">
+                        <td>1</td>
+                        <td><img src="player/messi.png" class="player-img"> Messi</td>
+                        <td class="first">Barcelona</td>
+                        <td class="first">4</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Cristiano Ronaldo</td>
+                        <td>Real Madrid</td>
+                        <td>4</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Neymar</td>
+                        <td>PSG</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Lewandowski</td>
+                        <td>Bayern</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Mbappe</td>
+                        <td>PSG</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Harry Kane</td>
+                        <td>Ajax</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Karim Benzema</td>
+                        <td>Real Madrid</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Luis Suarez</td>
+                        <td>Barcelona</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Wayne Rooney</td>
+                        <td>Man United</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Mohamed Salah</td>
+                        <td>Liverpool</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Erling Haaland</td>
+                        <td>Man City</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Kevin De Bruyne</td>
+                        <td>Man City</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Sergio Aguero</td>
+                        <td>Man City</td>
+                        <td>1</td>
+                    </tr>
+                </tbody>
+            </table>
+            <!-- <div class="full-link">
+                    <a href="#" class="text-primary">Full ranking link</a>
+                </div> -->
+        </div>
+        <div class="table-responsive m-5">
+            <h4 class="text-center sub-head">Top 10 Assists Leaders</h4>
+            <table class="table table-bordered table-striped text-center">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Rank</th>
+                        <th>Player</th>
+                        <th>Team</th>
+                        <th>Assists</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="first-row">
+                        <td>1</td>
+                        <td><img src="player/kevin.webp" class="player-img"> Kevin</td>
+                        <td>Man City</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Zinedine Zidane</td>
+                        <td>France</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Bruno Fernandes</td>
+                        <td>Man Utd</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Xavi</td>
+                        <td>Barcelona</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>David Silva</td>
+                        <td>Man City</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Luka Modric</td>
+                        <td>Real Madrid</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Mesut Ozil</td>
+                        <td>Arsenal</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Angel Di Maria</td>
+                        <td>PSG</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Thomas Muller</td>
+                        <td>Bayern</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>Eden Hazard</td>
+                        <td>Chelsea</td>
+                        <td>3</td>
+                    </tr>
+                </tbody>
+            </table>
+            <!-- <div class="full-link">
+                    <a href="#" class="text-primary">Full ranking link</a>
+                </div> -->
+        </div>
+        <div class="table-responsive m-5">
+            <h4 class="text-center sub-head">Red Cards</h4>
+            <table class="table table-bordered table-striped text-center">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Rank</th>
+                        <th>Player</th>
+                        <th>Team</th>
+                        <th>Red Cards</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Manuel Neuer</td>
+                        <td>Bayern</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Gianluigi Buffon</td>
+                        <td>Italy</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Alisson Becker</td>
+                        <td>Liverpool</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Ederson</td>
+                        <td>Man City</td>
+                        <td>1</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+
+    <div id="carouselExample" class="carousel slide d-md-none margin-s " data-bs-ride="carousel" id="stats">
+        <h2 class="container text-center mb-4 text-primary fw-bold mt-5 heading">STATS</h2>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="table-responsive">
+                    <h4 class="text-center sub-head">Top 10 Goal Scorers</h4>
+                    <table class="table table-bordered text-center res-stat-table">
+                        <thead class="table-dark ">
+                            <tr>
+                                <th>Rank</th>
+                                <th>Player</th>
+                                <th>Team</th>
+                                <th>Goals</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="first-row">
+                                <td>1</td>
+                                <td><img src="player/messi.png" class="player-img"> Messi</td>
+                                <td class="first">Barcelona</td>
+                                <td class="first">4</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>Cristiano Ronaldo</td>
+                                <td>Real Madrid</td>
+                                <td>4</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Neymar</td>
+                                <td>PSG</td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Lewandowski</td>
+                                <td>Bayern</td>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Mbappe</td>
+                                <td>PSG</td>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Harry Kane</td>
+                                <td>Ajax</td>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Karim Benzema</td>
+                                <td>Real Madrid</td>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>Luis Suarez</td>
+                                <td>Barcelona</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>Wayne Rooney</td>
+                                <td>Man United</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>Mohamed Salah</td>
+                                <td>Liverpool</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>Erling Haaland</td>
+                                <td>Man City</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>Kevin De Bruyne</td>
+                                <td>Man City</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>Sergio Aguero</td>
+                                <td>Man City</td>
+                                <td>1</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <!-- <div class="full-link ">
+                        <a href="#" class="text-primary ">Full ranking link</a>
+                    </div> -->
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="table-responsive">
+                    <h4 class="text-center sub-head">Top 10 Assists Leaders</h4>
+                    <table class="table table-bordered text-center res-stat-table">
+                        <tr>
+                            <th>Rank</th>
+                            <th>Player</th>
+                            <th>Team</th>
+                            <th>Assists</th>
+                        </tr>
+                        <tr class="first-row">
+                            <td>1</td>
+                            <td><img src="player/kevin.webp" class="player-img"> Kevin</td>
+                            <td>Man City</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Zinedine Zidane</td>
+                            <td>France</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Bruno Fernandes</td>
+                            <td>Man Utd</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Xavi</td>
+                            <td>Barcelona</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>David Silva</td>
+                            <td>Man City</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Luka Modric</td>
+                            <td>Real Madrid</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Mesut Ozil</td>
+                            <td>Arsenal</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Angel Di Maria</td>
+                            <td>PSG</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Thomas Muller</td>
+                            <td>Bayern</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Eden Hazard</td>
+                            <td>Chelsea</td>
+                            <td>3</td>
+                            </tbody>
+                    </table>
+                    <!-- <div class="full-link">
+                        <a href="#" class="text-primary">Full ranking link</a>
+                    </div> -->
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="table-responsive red-card">
+                    <h4 class="text-center sub-head">Red Cards</h4>
+                    <table class="table table-bordered text-center ">
+                        <thead class="table-dark">
+                            <tr>
+                                <th>Rank</th>
+                                <th>Player</th>
+                                <th>Team</th>
+                                <th>Red Cards</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Manuel Neuer</td>
+                                <td>Bayern</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>Gianluigi Buffon</td>
+                                <td>Italy</td>
+                                <td>1</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <footer class="footer mt-auto py-4">
+        <div class="container">
+            <div class="row text-center text-md-left">
+                <!-- Left: Logo & Description -->
+                <div class="col-md-4">
+                    <img src="im/wcl-logo-removebg-preview.png" alt="League Logo" class="footer-logo">
+                    <p class="footer-text">World Super League—Where Legends Play.</p>
+                </div>
+
+                <!-- Middle: Quick Links -->
+                <div class="col-md-4">
+                    <h5 class="footer-heading">Quick Links</h5>
+                    <ul class="footer-links">
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+
+                <!-- Right: Social Media & Subscribe -->
+                <div class="col-md-4 text-center text-md-right">
+                    <h5 class="footer-heading">Follow Us</h5>
+                    <div class="footer-socials">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+
+                    <!-- Subscribe Section -->
+                    <h5 class="footer-heading mt-3">Subscribe for Updates</h5>
+                    <form class="footer-subscribe d-flex">
+                        <input type="email" class="form-control me-2" placeholder="Enter your email" required>
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Bottom -->
+            <div class="footer-bottom text-center mt-3">
+                <p>&copy; <span id="year"></span> World Super League. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+
+
+</body>
+
+</html>

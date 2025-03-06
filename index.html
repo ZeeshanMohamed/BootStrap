@@ -17,24 +17,22 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
-
-
     <link rel="stylesheet" href="style.css">
-
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-dark border-bottom border-body" data-bs-theme="dark">
+    <nav class="navbar navbar-expand-lg navbar-dark border-bottom border-body fixed-top" data-bs-theme="dark">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
                 <img src="im/wcl-logo-removebg-preview.png" alt="Logo" width="70" height="64">
             </a>
 
             <!-- Toggler Button -->
-            <button class="navbar-toggler" type="button" id="navToggler" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" id="navToggler" aria-expanded="false"
+                aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
@@ -42,11 +40,11 @@
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
                     <a class="nav-link active" aria-current="page" href="#">Home</a>
-                    <a class="nav-link" href="#matches">Matches</a>
-                    <a class="nav-link" href="#standings">Standings</a>
-                    <a class="nav-link" href="#venues-section">Venues</a>
-                    <a class="nav-link" href="#stats">Stats</a>
-                    <a class="nav-link" href="#news">News</a>
+                    <a class="nav-link" href="matches.html">Matches</a>
+                    <a class="nav-link" href="standings.html">Standings</a>
+                    <a class="nav-link" href="venue.html">Venues</a>
+                    <a class="nav-link" href="stats.html">Stats</a>
+                    <a class="nav-link" href="news.html">News</a>
                 </div>
                 <div class="d-flex ms-auto">
                     <button class="btn btn-custom btn-login me-2" data-bs-toggle="modal"
@@ -58,10 +56,10 @@
         </div>
     </nav>
 
-    <!-- Bootstrap JS -->
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-    <!-- ✅ Fix for Navbar Refresh Issue -->
+
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             var navbarToggler = document.getElementById("navToggler");
@@ -69,7 +67,7 @@
 
             navbarToggler.addEventListener("click", function (event) {
                 event.preventDefault(); // ✅ Prevents refresh
-                
+
                 var isExpanded = navbarToggler.getAttribute("aria-expanded") === "true";
 
                 if (isExpanded) {
@@ -138,15 +136,15 @@
     </div>
 
 
-    <div class=" mb-2 text-primary-emphasis main-4">
-        <div id="carouselExampleFade" class="carousel slide carousel-fade ">
+    <div class=" mb-5 text-primary-emphasis main-4 ">
+        <div id="carouselExampleFade" class="carousel slide carousel-fade margin">
             <div class="carousel-inner ">
                 <div class="carousel-item active ">
                     <img src="carousel/1.jpeg" class="d-block w-100" alt="..." style=" height: 550px;">
                     <div class="carousel-caption  d-md-block">
                         <h2 style="text-shadow:2px 2px 4px rgba(0, 0, 0, 0.5); color: black; "
                             class="heading container">Remarkable Comback</h2>
-                        <p>Some representative placeholder content for the first slide.</p>
+                        <p class="hero-text">Some representative placeholder content for the first slide.</p>
                     </div>
                 </div>
                 <div class="carousel-item">
@@ -178,11 +176,10 @@
             </button>
         </div>
 
-        <div class=" p-3 mt-4 text-center" id="matches">
-            <h3 class="container text-center display-7 fw-bold text-uppercase d-flex justify-content-center text-dark p-3 rounded"
-                style="background-color: #d7e7ff; color: #22313f; font-family: 'Bebas Neue', sans-serif;">
-                Fixtures and Results
-            </h3>
+
+        <h2 class="container text-center  text-primary fw-bold mt-5 heading">MATCHES & FIXTURES</h2>
+        <div class=" p-3 mt-4 text-center margin-s" id="matches">
+
             <div class="scroll-container">
                 <div class="scroll-wrapper">
 
@@ -237,260 +234,17 @@
                         <p><strong>Venue:</strong> San Siro</p>
                         <button class="btn ">View Details</button>
                     </div>
-
-                    <div class="event-card ">
-                        <h5 class="card-title main-1">Match 5</h5>
-                        <div class="d-flex justify-content-center align-items-center main-1">
-                            <img src="teams/arsenal.png" class="team-logo me-2" alt="Team 1"
-                                style="height: 50px; width: 50px;">
-                            <span class="score ">2 - 1</span>
-                            <img src="teams/ajax.png" class="team-logo ms-2" alt="Team 2"
-                                style="height: 60px; width: 60px;">
-                        </div>
-                        <p class="mt-2">Date: 10 Mar 2025 | Time: 7:30 PM</p>
-                        <p><strong>Venue:</strong> Wembley Stadium</p>
-                        <button class="btn ">View Details</button>
-                    </div>
-
-                    <div class="event-card">
-                        <h5 class="card-title">Match 6</h5>
-                        <div class="d-flex justify-content-center align-items-center">
-                            <img src="teams/brazil.png" class="team-logo ms-2" alt="Team 4">
-                            <span class="score">1 - 3</span>
-                            <img src="teams/bayren.png" class="team-logo me-2" alt="Team 3">
-                        </div>
-                        <p class="mt-2">Date: 12 Mar 2025 | Time: 9:00 PM</p>
-                        <p><strong>Venue:</strong> Camp Nou</p>
-                        <button class="btn ">View Details</button>
-                    </div>
-
-                    <div class="event-card">
-                        <h5 class="card-title">Match 7</h5>
-                        <div class="d-flex justify-content-center align-items-center">
-                            <img src="teams/Rmad.png" class="team-logo me-2" alt="Team 5">
-                            <span class="score">0 - 0</span>
-                            <img src="teams/fcb.png" class="team-logo ms-2" alt="Team 6">
-                        </div>
-                        <p class="mt-2">Date: 15 Mar 2025 | Time: 8:45 PM</p>
-                        <p><strong>Venue:</strong> Allianz Arena</p>
-                        <button class="btn ">View Details</button>
-                    </div>
-
-                    <div class="event-card">
-                        <h5 class="card-title">Match 8</h5>
-                        <div class="d-flex justify-content-center align-items-center">
-                            <img src="teams/ajax.png" class="team-logo me-2" alt="Team 7">
-                            <span class="score">3 - 2</span>
-                            <img src="teams/mnU.png" class="team-logo ms-2" alt="Team 8">
-                        </div>
-                        <p class="mt-2">Date: 17 Mar 2025 | Time: 6:00 PM</p>
-                        <p><strong>Venue:</strong> San Siro</p>
-                        <button class="btn ">View Details</button>
-                    </div>
-
-                    <div class="event-card">
-                        <h5 class="card-title">Match 9</h5>
-                        <div class="d-flex justify-content-center align-items-center">
-                            <img src="teams/spain.png" class="team-logo me-2" alt="Team 5">
-                            <span class="score">0 - 0</span>
-                            <img src="teams/arsenal.png" class="team-logo ms-2" alt="Team 6">
-                        </div>
-                        <p class="mt-2">Date: 15 Mar 2025 | Time: 8:45 PM</p>
-                        <p><strong>Venue:</strong> Allianz Arena</p>
-                        <button class="btn ">View Details</button>
-                    </div>
-
-                    <div class="event-card">
-                        <h5 class="card-title">Match 10</h5>
-                        <div class="d-flex justify-content-center align-items-center">
-                            <img src="teams/france_files/france.png" class="team-logo me-2" alt="Team 7"
-                                style="width: 46px; padding-right: 4px;">
-                            <span class="score">3 - 2</span>
-                            <img src="teams/acmilan.png" class="team-logo ms-2" alt="Team 8">
-                        </div>
-                        <p class="mt-2">Date: 17 Mar 2025 | Time: 6:00 PM</p>
-                        <p><strong>Venue:</strong> San Siro</p>
-                        <button class="btn ">View Details</button>
-                    </div>
+                </div>
+                <div class="full-link">
+                    <a href="matches.html" class="text-primary">ALL FIXTURES</a>
                 </div>
             </div>
         </div>
 
-        <div class="p-3 mt-4 standings" id="standings" style="background: url(carousel/);">
-            <h3 class="container text-center display-7 fw-bold text-uppercase   p-3 rounded"
-                style="font-family: 'Bebas Neue', sans-serif; background-color: #d7e7ff;">
-                Standings
-            </h3>
 
-            <div class="row">
-                <!-- First Two List Groups in First Row -->
-                <div class="col-md-6">
-                    <ul class="list-group list-group-flush">
-                        <h4 class="mb-2 ">Group A</h4>
-                        <li class="list-group-item d-flex justify-content-between mb-1 rounded-3 text-dark">
-                            <span>1. &nbsp;&nbsp;&nbsp;&nbsp;<img src="teams/fcb.png" alt="">&nbsp;&nbsp;Barcelona
-                            </span> <span>&emsp; 10 pts &emsp; +7</span>
-                        </li>
-                        <li class="list-group-item d-flex justify-content-between mb-1 rounded-3 text-dark">
-                            <span>2. &nbsp;&nbsp;&nbsp;&nbsp;<img src="teams/bayren.png" alt="">&nbsp;&nbsp;Bayern
-                                Munich </span> <span>&emsp; 9 pts &emsp; +5</span>
-                        </li>
-                        <li class="list-group-item d-flex justify-content-between mb-1 rounded-3 text-dark">
-                            <span>3. &nbsp;&nbsp;&nbsp;&nbsp;<img src="teams/france_files/france.png"
-                                    alt="">&nbsp;&nbsp;France </span> <span>&emsp; 7 pts &emsp; +3</span>
-                        </li>
-                        <li class="list-group-item d-flex justify-content-between mb-1 rounded-3 text-dark">
-                            <span>4. &nbsp;&nbsp;&nbsp;&nbsp;<img src="teams/acmilan.png" alt="">&nbsp;&nbsp;AC Milan
-                            </span> <span>&emsp; 4 pts &emsp; - 2</span>
-                        </li>
-                        <li class="list-group-item d-flex justify-content-between mb-1 rounded-3 text-dark">
-                            <span>5. &nbsp;&nbsp;&nbsp;&nbsp;<img src="teams/arsenal.png" alt="">&nbsp;&nbsp;Arsenal
-                            </span> <span>&emsp; 1 pt &emsp; - 6</span>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-md-6">
-                    <ul class="list-group list-group-flush">
-                        <h4 class="mb-2 ">Group B</h4>
-                        <li class="list-group-item d-flex justify-content-between mb-1 rounded-3 text-dark">
-                            <span>1. &nbsp;&nbsp;&nbsp;&nbsp;<img src="teams/brazil.png" alt="">&nbsp;&nbsp;Brazil
-                            </span> <span>&emsp; 12 pts &emsp; +6</span>
-                        </li>
-                        <li class="list-group-item d-flex justify-content-between mb-1 rounded-3 text-dark">
-                            <span>2. &nbsp;&nbsp;&nbsp;&nbsp;<img src="teams/mnU.png" alt="">&nbsp;&nbsp;Man
-                                United </span> <span>&emsp; 9 pts &emsp; +4</span>
-                        </li>
-                        <li class="list-group-item d-flex justify-content-between mb-1 rounded-3 text-dark">
-                            <span>3. &nbsp;&nbsp;&nbsp;&nbsp;<img src="teams/Rmad.png" alt="">&nbsp;&nbsp;Real Madrid
-                            </span> <span>&emsp; 7 pts &emsp; +2</span>
-                        </li>
-                        <li class="list-group-item d-flex justify-content-between mb-1 rounded-3 text-dark">
-                            <span>4. &nbsp;&nbsp;&nbsp;&nbsp;<img src="teams/spain.png" alt="">&nbsp;&nbsp;Spain
-                            </span> <span>&emsp; 4 pts &emsp; -2</span>
-                        </li>
-                        <li class="list-group-item d-flex justify-content-between mb-1 rounded-3 text-dark">
-                            <span>5. &nbsp;&nbsp;&nbsp;&nbsp;<img src="teams/ajax.png" alt="">&nbsp;&nbsp;Ajax
-                            </span> <span>&emsp; 0 pts &emsp; -7</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <div class="p-3 -cities venue" id="main-4" id="venues-section">
-            <h2 class="container mb-1 mt-5 text-center heading">Venue</h2>
-            <div class="Australia">
-                <div class=" mt-4">
-                    <h4 class="mb-2" style="color: #9ec4fc; text-shadow: 2px 2px 5px rgb(0, 0, 0);">Australia</h4>
-                    <div class="row g-3">
-                        <div class="col-md-3">
-                            <div class="venue-card">
-                                <img src="stadium/a1.jpg" alt="Image" style="height: 180px;">
-                                <div class="venue-card-body">
-                                    SYDNEY
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-md-3">
-                            <div class="venue-card">
-                                <img src="stadium/a2.jpg" alt="Image" style="height: 180px;">
-                                <div class="venue-card-body">
-                                    MELBOURNE
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-md-3">
-                            <div class="venue-card">
-                                <img src="stadium/a3.jpeg" alt="Image" style="height: 180px;">
-                                <div class="venue-card-body">
-                                    PERTH
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-md-3">
-                            <div class="venue-card">
-                                <img src="stadium/a4.jpg" alt="Image" style="height: 180px;">
-                                <div class="venue-card-body">
-                                    QUEENSLAND
-                                </div>
-                            </div>
-                        </div>
-
-
-
-                        <div class="col-md-3">
-                            <div class="venue-card">
-                                <img src="stadium/a5.webp" alt="Image" style="height: 180px;">
-                                <div class="venue-card-body">
-                                    BRISBANE
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-md-3">
-                            <div class="venue-card">
-                                <img src="stadium/a6.webp" alt="Image" style="height: 180px;">
-                                <div class="venue-card-body">
-                                    ADELAIDE
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="New Zealand">
-                    <div class=" mt-4">
-                        <h4 class="mb-2" style="color: #9ec4fc; text-shadow: 2px 2px 5px rgb(0, 0, 0);">New Zealand</h4>
-                        <div class="row g-3">
-                            <div class="col-md-3">
-                                <div class="venue-card">
-                                    <img src="stadium/n1.jpg" alt="Image" style="height: 180px;">
-                                    <div class="venue-card-body">
-                                        WEILLINGTON
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-md-3">
-                                <div class="venue-card">
-                                    <img src="stadium/n2.jpg" alt="Image" style="height: 180px;">
-                                    <div class="venue-card-body">
-                                        AUCKLAND
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-md-3">
-                                <div class="venue-card">
-                                    <img src="stadium/n3.jpg" alt="Image" style="height: 180px;">
-                                    <div class="venue-card-body">
-                                        HAMILTON
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-md-3">
-                                <div class="venue-card">
-                                    <img src="stadium/n4.webp" alt="Image" style="height: 180px;">
-                                    <div class="venue-card-body">
-                                        CHRISTCHURCH
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-
-        <!-- Top Goal Scorers -->
-        <div class=" mt-4 d-none d-md-block" id="stats">
-            <h2 class="container mb-5 mt-5 text-center heading">Stats</h2>
+        <div class=" mt-4 d-none d-md-block margin-s" id="stats">
             <div class="table-container">
+                <h2 class="container text-center  text-primary fw-bold  heading">STATS</h2>
                 <div class="table-responsive">
                     <h4 class="text-center sub-head">Top 10 Goal Scorers</h4>
                     <table class="table table-bordered table-striped text-center">
@@ -507,66 +261,36 @@
                                 <td>1</td>
                                 <td><img src="player/messi.png" class="player-img"> Messi</td>
                                 <td class="first">Barcelona</td>
-                                <td class="first">7</td>
+                                <td class="first">4</td>
                             </tr>
                             <tr>
-                                <td>2</td>
+                                <td>1</td>
                                 <td>Cristiano Ronaldo</td>
                                 <td>Real Madrid</td>
-                                <td>6</td>
+                                <td>4</td>
                             </tr>
                             <tr>
                                 <td>3</td>
                                 <td>Neymar</td>
                                 <td>PSG</td>
-                                <td>6</td>
+                                <td>3</td>
                             </tr>
                             <tr>
                                 <td>4</td>
                                 <td>Lewandowski</td>
                                 <td>Bayern</td>
-                                <td>5</td>
+                                <td>2</td>
                             </tr>
                             <tr>
-                                <td>5</td>
+                                <td>4</td>
                                 <td>Mbappe</td>
                                 <td>PSG</td>
-                                <td>5</td>
-                            </tr>
-                            <tr>
-                                <td>6</td>
-                                <td>Harry Kane</td>
-                                <td>Ajax</td>
-                                <td>4</td>
-                            </tr>
-                            <tr>
-                                <td>7</td>
-                                <td>Karim Benzema</td>
-                                <td>Real Madrid</td>
-                                <td>4</td>
-                            </tr>
-                            <tr>
-                                <td>8</td>
-                                <td>Luis Suarez</td>
-                                <td>Barcelona</td>
-                                <td>3</td>
-                            </tr>
-                            <tr>
-                                <td>9</td>
-                                <td>Wayne Rooney</td>
-                                <td>Man United</td>
-                                <td>3</td>
-                            </tr>
-                            <tr>
-                                <td>10</td>
-                                <td>Erling Haaland</td>
-                                <td>Man City</td>
-                                <td>3</td>
+                                <td>2</td>
                             </tr>
                         </tbody>
                     </table>
                     <div class="full-link">
-                        <a href="#" class="text-primary">Full ranking link</a>
+                        <a href="stats.html" class="text-primary">Full ranking link</a>
                     </div>
                 </div>
                 <div class="table-responsive">
@@ -585,66 +309,36 @@
                                 <td>1</td>
                                 <td><img src="player/kevin.webp" class="player-img"> Kevin</td>
                                 <td>Man City</td>
-                                <td>6</td>
+                                <td>3</td>
                             </tr>
                             <tr>
                                 <td>2</td>
                                 <td>Zinedine Zidane</td>
                                 <td>France</td>
-                                <td>5</td>
+                                <td>2</td>
                             </tr>
                             <tr>
-                                <td>3</td>
-                                <td>Xavi</td>
-                                <td>Barcelona</td>
-                                <td>5</td>
-                            </tr>
-                            <tr>
-                                <td>4</td>
-                                <td>David Silva</td>
-                                <td>Man City</td>
-                                <td>4</td>
-                            </tr>
-                            <tr>
-                                <td>5</td>
-                                <td>Luka Modric</td>
-                                <td>Real Madrid</td>
-                                <td>4</td>
-                            </tr>
-                            <tr>
-                                <td>6</td>
-                                <td>Mesut Ozil</td>
-                                <td>Arsenal</td>
-                                <td>4</td>
-                            </tr>
-                            <tr>
-                                <td>7</td>
-                                <td>Angel Di Maria</td>
-                                <td>PSG</td>
-                                <td>3</td>
-                            </tr>
-                            <tr>
-                                <td>8</td>
-                                <td>Thomas Muller</td>
-                                <td>Bayern</td>
-                                <td>3</td>
-                            </tr>
-                            <tr>
-                                <td>9</td>
+                                <td>2</td>
                                 <td>Bruno Fernandes</td>
                                 <td>Man Utd</td>
-                                <td>3</td>
+                                <td>2</td>
                             </tr>
                             <tr>
-                                <td>10</td>
-                                <td>Eden Hazard</td>
-                                <td>Chelsea</td>
-                                <td>3</td>
+                                <td>2</td>
+                                <td>Xavi</td>
+                                <td>Barcelona</td>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>David Silva</td>
+                                <td>Man City</td>
+                                <td>2</td>
                             </tr>
                         </tbody>
                     </table>
                     <div class="full-link">
-                        <a href="#" class="text-primary">Full ranking link</a>
+                        <a href="stats.html" class="text-primary">Full ranking link</a>
                     </div>
                 </div>
                 <div class="table-responsive">
@@ -689,9 +383,9 @@
             </div>
         </div>
 
-        <div id="carouselExample" class="carousel slide d-md-none" data-bs-ride="carousel" id="stats">
+        <div id="carouselExample" class="carousel slide d-md-none mt-1" data-bs-ride="carousel" id="stats">
+            <h2 class="container text-center mb-4 text-primary fw-bold mt-5 heading">STATS</h2>
             <div class="carousel-inner">
-                <h2 class="container mb-5 mt-5 text-center heading">Stats</h2>
                 <div class="carousel-item active">
                     <div class="table-responsive">
                         <h4 class="text-center sub-head">Top 10 Goal Scorers</h4>
@@ -709,66 +403,35 @@
                                     <td>1</td>
                                     <td><img src="player/messi.png" class="player-img"> Messi</td>
                                     <td class="first">Barcelona</td>
-                                    <td class="first">7</td>
+                                    <td class="first">4</td>
                                 </tr>
                                 <tr>
-                                    <td>2</td>
+                                    <td>1</td>
                                     <td>Cristiano Ronaldo</td>
                                     <td>Real Madrid</td>
-                                    <td>6</td>
+                                    <td>4</td>
                                 </tr>
                                 <tr>
                                     <td>3</td>
                                     <td>Neymar</td>
                                     <td>PSG</td>
-                                    <td>6</td>
+                                    <td>3</td>
                                 </tr>
                                 <tr>
                                     <td>4</td>
                                     <td>Lewandowski</td>
                                     <td>Bayern</td>
-                                    <td>5</td>
+                                    <td>2</td>
                                 </tr>
                                 <tr>
-                                    <td>5</td>
+                                    <td>4</td>
                                     <td>Mbappe</td>
                                     <td>PSG</td>
-                                    <td>5</td>
-                                </tr>
-                                <tr>
-                                    <td>6</td>
-                                    <td>Harry Kane</td>
-                                    <td>Ajax</td>
-                                    <td>4</td>
-                                </tr>
-                                <tr>
-                                    <td>7</td>
-                                    <td>Karim Benzema</td>
-                                    <td>Real Madrid</td>
-                                    <td>4</td>
-                                </tr>
-                                <tr>
-                                    <td>8</td>
-                                    <td>Luis Suarez</td>
-                                    <td>Barcelona</td>
-                                    <td>3</td>
-                                </tr>
-                                <tr>
-                                    <td>9</td>
-                                    <td>Wayne Rooney</td>
-                                    <td>Man United</td>
-                                    <td>3</td>
-                                </tr>
-                                <tr>
-                                    <td>10</td>
-                                    <td>Erling Haaland</td>
-                                    <td>Man City</td>
-                                    <td>3</td>
-                                </tr>
+                                    <td>2</td>
                             </tbody>
                         </table>
                         <div class="full-link ">
-                            <a href="#" class="text-primary ">Full ranking link</a>
+                            <a href="stats.html" class="text-primary ">Full ranking link</a>
                         </div>
                     </div>
                 </div>
@@ -789,66 +452,36 @@
                                     <td>1</td>
                                     <td><img src="player/kevin.webp" class="player-img"> Kevin</td>
                                     <td>Man City</td>
-                                    <td>6</td>
+                                    <td>3</td>
                                 </tr>
                                 <tr>
                                     <td>2</td>
                                     <td>Zinedine Zidane</td>
                                     <td>France</td>
-                                    <td>5</td>
+                                    <td>2</td>
                                 </tr>
                                 <tr>
-                                    <td>3</td>
-                                    <td>Xavi</td>
-                                    <td>Barcelona</td>
-                                    <td>5</td>
-                                </tr>
-                                <tr>
-                                    <td>4</td>
-                                    <td>David Silva</td>
-                                    <td>Man City</td>
-                                    <td>4</td>
-                                </tr>
-                                <tr>
-                                    <td>5</td>
-                                    <td>Luka Modric</td>
-                                    <td>Real Madrid</td>
-                                    <td>4</td>
-                                </tr>
-                                <tr>
-                                    <td>6</td>
-                                    <td>Mesut Ozil</td>
-                                    <td>Arsenal</td>
-                                    <td>4</td>
-                                </tr>
-                                <tr>
-                                    <td>7</td>
-                                    <td>Angel Di Maria</td>
-                                    <td>PSG</td>
-                                    <td>3</td>
-                                </tr>
-                                <tr>
-                                    <td>8</td>
-                                    <td>Thomas Muller</td>
-                                    <td>Bayern</td>
-                                    <td>3</td>
-                                </tr>
-                                <tr>
-                                    <td>9</td>
+                                    <td>2</td>
                                     <td>Bruno Fernandes</td>
                                     <td>Man Utd</td>
-                                    <td>3</td>
+                                    <td>2</td>
                                 </tr>
                                 <tr>
-                                    <td>10</td>
-                                    <td>Eden Hazard</td>
-                                    <td>Chelsea</td>
-                                    <td>3</td>
+                                    <td>2</td>
+                                    <td>Xavi</td>
+                                    <td>Barcelona</td>
+                                    <td>2</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>David Silva</td>
+                                    <td>Man City</td>
+                                    <td>2</td>
                                 </tr>
                             </tbody>
                         </table>
                         <div class="full-link">
-                            <a href="#" class="text-primary">Full ranking link</a>
+                            <a href="stats.html" class="text-primary">Full ranking link</a>
                         </div>
                     </div>
                 </div>
@@ -884,38 +517,16 @@
             </div>
         </div>
 
-
-        <!-- news -->
-
-        <h2 class="container text-center mb-4 text-primary fw-bold mt-5 heading">NEWS</h2>
+        <!-- News Section -->
         <div class="container" id="news">
-            <!-- News Section -->
+            <h2 class="container text-center mb-4 text-primary fw-bold heading">NEWS & MEDIA</h2>
             <div class="row news-scroll">
-                <div class="col-md-6 col-sm-12">
-                    <div class="card">
-                        <img src="news/bayern_muenchen_v_manchester_united_-_friendly_match.avif" class="card-img-top"
-                            alt="Card 1">
-                        <div class="card-body">
-                            <h5 class="card-title">Card 1</h5>
-                            <p class="card-text">This is the first card.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-sm-12">
-                    <div class="card">
-                        <img src="news/madrid.avif" class="card-img-top" alt="Card 2">
-                        <div class="card-body">
-                            <h5 class="card-title">Card 2</h5>
-                            <p class="card-text">This is the second card.</p>
-                        </div>
-                    </div>
-                </div>
                 <div class="col-md-4 col-sm-12">
                     <div class="card">
                         <img src="news/cr7.webp" class="card-img-top" alt="Card 3">
                         <div class="card-body">
-                            <h5 class="card-title">Card 3</h5>
-                            <p class="card-text">This is the third card.</p>
+                            <h5 class="card-title">Huge blow for Man City</h5>
+                            <p class="card-text">Ronaldo suffers injury scare in WSL clash - awaiting medical updates.</p>
                         </div>
                     </div>
                 </div>
@@ -923,8 +534,8 @@
                     <div class="card">
                         <img src="news/coach.avif" class="card-img-top" alt="Card 4">
                         <div class="card-body">
-                            <h5 class="card-title">Card 4</h5>
-                            <p class="card-text">This is the fourth card.</p>
+                            <h5 class="card-title">Tactical Shakeup!!!</h5>
+                            <p class="card-text">Top managers under pressure as WSL title race heats up!</p>
                         </div>
                     </div>
                 </div>
@@ -932,14 +543,38 @@
                     <div class="card">
                         <img src="news/messi.webp" class="card-img-top" alt="Card 5">
                         <div class="card-body">
-                            <h5 class="card-title">Card 5</h5>
-                            <p class="card-text">This is the fifth card.</p>
+                            <h5 class="card-title">Messi's magic</h5>
+                            <p class="card-text">Messi stuns with a sensational hat-trick, leading most Goals in the WSL!</p>
                         </div>
                     </div>
+                </div>
+                <div class="full-link">
+                    <a href="news.html" class="text-primary">MORE</a>
                 </div>
             </div>
 
         </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
         <h2 class="container text-center mb-4 text-primary fw-bold mt-5 heading">Official Sponsors</h2>
@@ -977,7 +612,7 @@
                         <img src="im/wcl-logo-removebg-preview.png" alt="League Logo" class="footer-logo">
                         <p class="footer-text">World Super League—Where Legends Play.</p>
                     </div>
-        
+
                     <!-- Middle: Quick Links -->
                     <div class="col-md-4">
                         <h5 class="footer-heading">Quick Links</h5>
@@ -988,7 +623,7 @@
                             <li><a href="#">Terms & Conditions</a></li>
                         </ul>
                     </div>
-        
+
                     <!-- Right: Social Media & Subscribe -->
                     <div class="col-md-4 text-center text-md-right">
                         <h5 class="footer-heading">Follow Us</h5>
@@ -998,7 +633,7 @@
                             <a href="#"><i class="fab fa-instagram"></i></a>
                             <a href="#"><i class="fab fa-youtube"></i></a>
                         </div>
-        
+
                         <!-- Subscribe Section -->
                         <h5 class="footer-heading mt-3">Subscribe for Updates</h5>
                         <form class="footer-subscribe d-flex">
@@ -1007,14 +642,14 @@
                         </form>
                     </div>
                 </div>
-        
+
                 <!-- Bottom -->
                 <div class="footer-bottom text-center mt-3">
                     <p>&copy; <span id="year"></span> World Super League. All Rights Reserved.</p>
                 </div>
             </div>
         </footer>
-        
+
 
 
     </div>
