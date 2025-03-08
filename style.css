@@ -38,6 +38,7 @@ h2 {
 
 .navbar-brand img {    
     transition: transform 0.3s ease-in-out;
+    margin-right: 10px;
 }
 
 .navbar-brand img:hover {
@@ -206,6 +207,7 @@ h2 {
     width: 100%;
     height: auto;
     display: block;
+
 }
 
 /* Text Box with Semi-Transparent Background */
@@ -223,19 +225,51 @@ h2 {
     text-align: center;
     white-space: nowrap;
 }
+.small-screen-img {
+    height: auto;   
+}
 
-/* Responsive Design */
+.carousel-heading{
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 28px;
+    color: #222;
+    background: #d7e7ff;
+    border-radius: 8px;
+    text-align: center;
+    padding: 10px;
+
+}
+
 @media (max-width: 768px) {
     .hero-text {
-        font-size: 16px;
+        font-size: 12px;
         padding: 8px 15px;
     }
+
+    .carousel-heading{
+        font-size: 21px;
+        width: 70%;
+    }
+
+    .carousel-inner{
+        height: 300px;
+    }
+    .small-screen-img {
+        height: 300px   
+    }
+/* match card - hero page */
+    .main-1{
+        width: 250px;
+    }
+    
+    
 }
 
 
 /* Card Styling */
 .event-card {
     flex: 0 0 calc(25% - 15px);
+    height: 220px;
     width: 500px;
     text-align: center;
     background: white;
@@ -251,6 +285,8 @@ h2 {
 .event-card:hover {
     transform: scale(1.05);
 }
+
+
 
 
 /* Team Logo */
@@ -486,6 +522,7 @@ li:hover {
     border-radius: 8px;
     text-align: center;
     margin-bottom: 20px;
+    padding: 10px;
     
 }
 
@@ -576,6 +613,11 @@ li:hover {
     .group{
         display: none;
     }
+
+    .heading {
+        width: 90%;
+    }
+    
 }
 
 
